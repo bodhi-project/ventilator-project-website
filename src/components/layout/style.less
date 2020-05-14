@@ -64,6 +64,8 @@
 
             &.is-active {
               & a {
+                color: #0000ff !important;
+
                 & span {
                   font-weight: 700;
                   font-size: 140%;
@@ -80,6 +82,16 @@
                   // text-transform: uppercase;
                 }
               }
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        & .button-menu {
+          & button {
+            &:nth-child(3) {
+              padding-right: unset !important;
             }
           }
         }
@@ -105,10 +117,10 @@
   & footer,
   main {
     & a:not(.ignore):not(.not-active) {
-      color: #000 !important;
+      color: #000;
 
       &:hover {
-        color: #0000ff !important;
+        color: #0000ff;
       }
     }
   }

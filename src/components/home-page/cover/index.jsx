@@ -10,8 +10,8 @@ import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Division from '@bodhi-project/components/lib/Division'
-import '@bodhi-project/antrd/lib/just-futura/3.19.3/row/style/css'
-import '@bodhi-project/antrd/lib/just-futura/3.19.3/col/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/row/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/col/style/css'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import Link from '../../Link'

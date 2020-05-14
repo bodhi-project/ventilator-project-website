@@ -24,8 +24,8 @@ import '@bodhi-project/components/lib/header-navigations/primitives/list-menu-re
 import MinimalFooterNavigation from '@bodhi-project/components/lib/footer-navigations/minimal'
 import '@bodhi-project/components/lib/footer-navigations/minimal/style.less'
 
-import '@bodhi-project/antrd/lib/just-futura/3.19.3/style/index.css'
-import '@bodhi-project/antrd/lib/just-futura/3.19.3/style/v2-compatible-reset.css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/style/index.css'
+// import '@bodhi-project/antrd/lib/just-futura/4.1.4/style/v2-compatible-reset.css'
 
 import '@bodhi-project/components/lib/containers/default-container.less'
 import '@bodhi-project/components/lib/containers/small-default-container.less'
@@ -64,6 +64,17 @@ export const query = graphql`
   fragment max900 on File {
     childImageSharp {
       fluid(maxWidth: 900, quality: 80, srcSetBreakpoints: [300, 600, 900]) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
+  fragment max1500 on File {
+    childImageSharp {
+      fluid(
+        maxWidth: 900
+        quality: 80
+        srcSetBreakpoints: [300, 600, 900, 1200, 1500]
+      ) {
         ...GatsbyImageSharpFluid_withWebp_tracedSVG
       }
     }
@@ -134,7 +145,7 @@ class Layout extends React.Component {
 
   /** standard renderer */
   render() {
-    const { children } = this.props
+    const { children, uri = '' } = this.props
 
     return (
       <Fragment>
@@ -148,10 +159,15 @@ class Layout extends React.Component {
           query={query}
           render={data => {
             return (
-              <div className="small-default-container" id="layout">
+              <div
+                className="small-default-container"
+                id="layout"
+                data-uri={uri}
+              >
                 <header>
                   <br />
                   <SplitNavigation
+                    {...this.props}
                     data={desktopMenu}
                     Link={Link}
                     Img={Img}
@@ -165,9 +181,7 @@ class Layout extends React.Component {
                     desktopLogo={data.desktopLogo.childImageSharp.fluid}
                     logoIcon={data.logoIcon.childImageSharp.fluid}
                     logoIconHeight={60}
-                    {...this.props}
                   />
-                  <br />
                 </header>
                 <main role="main">{children}</main>
                 <footer>

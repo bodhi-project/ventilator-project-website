@@ -142,7 +142,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`, // https://www.npmjs.com/package/gatsby-plugin-favicon
       options: {
-        logo: './src/images/logos/shift-education-logo-bw-for-favicon.jpg',
+        logo: './src/images/logos/logo.png',
         // WebApp Manifest Configuration
         appName: data.websiteName,
         appDescription: data.websiteDescription,

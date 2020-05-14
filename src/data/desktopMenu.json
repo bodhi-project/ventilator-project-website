@@ -1,0 +1,8 @@
+[
+  { "title": "Blowfish", "link": "/blowfish/" },
+  { "title": "JASAN", "link": "/jasan/" },
+  { "title": "Purifier", "link": "/purifier/" },
+  { "title": "About", "link": "/about" },
+  { "title": "More", "menu": [{ "title": "FAQs", "link": "/faqs" }] },
+  { "title": "Support", "link": "/support" }
+]

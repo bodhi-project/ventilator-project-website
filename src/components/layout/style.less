@@ -1,0 +1,129 @@
+&#layout {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+
+  .not-active {
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    text-decoration: none !important;
+    color: #808080 !important;
+    pointer-events: all !important;
+  }
+
+  & .mobile-only {
+    @media (min-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  & .tablet-only {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+  }
+
+  & .desktop-only {
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  }
+
+  & .header.split {
+    & a.left {
+      left: -90px !important;
+    }
+
+    & .header-navigation {
+      & .button-menu {
+        & button {
+          border: unset !important;
+          box-shadow: unset !important;
+
+          &:hover {
+            border: unset !important;
+            box-shadow: unset !important;
+          }
+
+          & a {
+            color: #000 !important;
+
+            &:hover {
+              color: #0000ff !important;
+            }
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        & .button-menu {
+          & button {
+            &:nth-child(1) {
+              padding-left: unset !important;
+            }
+
+            &.is-active {
+              & a {
+                & span {
+                  font-weight: 700;
+                  font-size: 140%;
+                  // text-transform: uppercase;
+                }
+              }
+            }
+
+            &.is-inactive {
+              & a {
+                & span {
+                  font-weight: 700;
+                  font-size: 100%;
+                  // text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  & main {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  & footer {
+    & .minimal-footer {
+      padding: unset !important;
+
+      & .post-note {
+        border-top: 2px solid #000000 !important;
+      }
+    }
+  }
+
+  & footer,
+  main {
+    & a:not(.ignore):not(.not-active) {
+      color: #000 !important;
+
+      &:hover {
+        color: #0000ff !important;
+      }
+    }
+  }
+}
+
+.header-navigation-drop.is-more {
+  & ul {
+    margin-bottom: unset !important;
+
+    & a {
+      color: #000 !important;
+
+      &:hover {
+        color: #0000ff !important;
+      }
+    }
+  }
+}

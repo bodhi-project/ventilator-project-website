@@ -46,6 +46,13 @@ a.disabled {
   cursor: not-allowed;
 }
 
+p {
+  max-width: 45em;
+}
+
+/* ------------------------------------------------------------------------- */
+/* ----------------------------------------------------------- AntD rewrites
+/* ------------------------------------------------------------------------- */
 .ant-tabs-bar {
   border-bottom: 1px solid transparent !important;
 }
@@ -71,6 +78,44 @@ a.disabled {
   background-color: #f8f8f8 !important;
 }
 
+.ant-tooltip {
+  & p {
+    margin-bottom: unset !important;
+
+    & strong {
+      font-weight: 700;
+    }
+  }
+}
+
+.slick-dots {
+  opacity: 1 !important;
+
+  & li {
+    height: 24px !important;
+    width: 24px !important;
+    opacity: 1 !important;
+
+    & button {
+      border-radius: 50% !important;
+      height: 24px !important;
+      width: 24px !important;
+      background-color: #0000ff !important;
+      opacity: 1 !important;
+    }
+
+    &.slick-active {
+      & button {
+        background-color: #ffd700 !important;
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------- /blowfish
+/* ------------------------------------------------------------------------- */
 [data-uri='/blowfish'] {
   & .feature {
     border: 2px solid #0000ff;
@@ -104,16 +149,55 @@ a.disabled {
         top: 55%;
         left: 29%;
       }
+
+      &.tip3 {
+        top: 22%;
+        left: 37%;
+      }
+
+      &.tip4 {
+        top: 28%;
+        left: 22%;
+      }
+
+      &.tip5 {
+        top: 60%;
+        left: 55%;
+      }
     }
   }
-}
 
-.ant-tooltip {
-  & p {
-    margin-bottom: unset !important;
+  .ant-tabs-tabpane {
+    & > .ant-tabs {
+      & .ant-tabs-right-content {
+        border: unset !important;
+      }
 
-    & strong {
-      font-weight: 700;
+      & .ant-tabs-bar {
+        border: unset !important;
+      }
+
+      & .ant-tabs-bar {
+        width: 37.5% !important;
+
+        & .ant-tabs-tab {
+          text-align: left !important;
+          padding-left: 36px !important;
+
+          & a {
+            line-height: 1 !important;
+            text-align: left !important;
+          }
+        }
+      }
+
+      & .ant-tabs-ink-bar {
+        height: 24px !important;
+        width: 24px !important;
+        border-radius: 50% !important;
+        left: 2px !important;
+        top: 18px !important;
+      }
     }
   }
 }

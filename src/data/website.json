@@ -1,12 +1,12 @@
 {
-  "websiteName": "Shift Education",
+  "websiteName": "Emergency Response Machines",
   "websiteCreator": "Bodhi Project",
-  "websiteUrl": "https://www.shift.education/",
-  "nakedWebsiteUrl": "https://www.shift.education",
+  "websiteUrl": "https://www.erm.io/",
+  "nakedWebsiteUrl": "https://www.erm.io",
   "devUrl": "http://localhost:8000/",
   "nakedDevUrl": "http://localhost:8000",
   "websiteKeywords": "Edtech",
-  "websiteAbstract": "We are looking at ed-tech, curriculums, processes and systems, connection with nature, community engagement and more. Our intention is to offer a different way, a 'better way', of doing things that is more authentic and has depth.",
+  "websiteAbstract": "Emergency Response Machines from Auroville",
   "websiteDescription": "We are looking at ed-tech, curriculums, processes and systems, connection with nature, community engagement and more. Our intention is to offer a different way, a 'better way', of doing things that is more authentic and has depth.",
   "rssUrl": "/rss.xml",
   "org": {

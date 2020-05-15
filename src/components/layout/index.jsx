@@ -184,7 +184,13 @@ class Layout extends React.Component {
                   />
                 </header>
                 <main role="main">{children}</main>
-                <footer>
+                <footer style={{ borderTop: '2px solid black' }}>
+                  <br />
+                  <p style={{ marginBottom: 0, textAlign: 'center' }}>
+                    <strong>Disclaimer</strong>: These prototype designs are in
+                    an experimental phase, and are{' '}
+                    <u>not medically certified for use</u>.
+                  </p>
                   <MinimalFooterNavigation data={desktopMenu} Link={Link} />
                 </footer>
               </div>

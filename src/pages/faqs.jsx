@@ -44,7 +44,7 @@ class Page extends React.Component {
   render() {
     return (
       <StandardPage seoData={seoData} {...this.props}>
-        Loading...
+        <p>Coming soon...</p>
       </StandardPage>
     )
   }

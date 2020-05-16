@@ -43,9 +43,10 @@ import seoHelper from '../../methods/seoHelper'
 const { Fragment } = React
 const { TabPane } = Tabs
 const pageData = {
-  pageTitle: 'Home | Auroville Dynamics',
-  nakedPageSlug: '',
-  pageAbstract: 'Auroville Dynamics',
+  pageTitle: 'Blowfish Ventilator',
+  nakedPageSlug: '/blowfish',
+  pageAbstract:
+    'Blowfish is a low-cost, low-tech, portable, mechanised, non-invasive resuscitator that automates the process of manual ventilation for patients in situations where not enough ventilators are available or in resource-constrained environments. The device may offer a chance of survival to patients who do not have access to a more sophisticated artificial ventilator due to shortage of supply or absence in remote areas.',
 }
 
 const seoData = seoHelper(pageData)
@@ -55,21 +56,25 @@ const columns = [
     title: 'Parameter',
     dataIndex: 'parameter',
     key: 'parameter',
+    width: '15%',
   },
   {
     title: 'Min. Required',
     dataIndex: 'required',
     key: 'required',
+    width: '55%',
   },
   {
     title: 'Have?',
     dataIndex: 'have',
     key: 'have',
+    width: '15%',
   },
   {
     title: 'Upcoming?',
     key: 'upcoming',
     dataIndex: 'upcoming',
+    width: '15%',
   },
 ]
 
@@ -77,46 +82,79 @@ const data = [
   {
     key: '1',
     parameter: 'Modes',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '2',
     parameter: 'Tidal Volume',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Modes',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Rate',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'PEEP',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Plateau Pressure',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'I/E Ratio',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Expired filtration',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Inspired filtration',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'FiO2',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
   {
     key: '3',
     parameter: 'Assist Control',
+    required: '...',
+    have: '...',
+    upcoming: '...',
   },
 ]
 
@@ -372,8 +410,9 @@ class Page extends React.Component {
               this prototype design up to a level considered medically-viable,
               and even further work needed to reach medical-grade status. At the
               moment of writing this document, the engineering teams from
-              Auroville are collaborating with Dr. Karnam Hasan of PIMS and a
-              bio-medical device engineers with whom the device maybe tested
+              Auroville are collaborating with Dr. Karnam Hasan of PIMS
+              (Pondicherry Institute of Medical Sciences) and a bio-medical
+              device engineers with whom the device is being / will be tested
               comprehensively and iterated as necessary.
             </p>
           </TabPane>

@@ -3,23 +3,39 @@
 // ----------------------------------------------------------------------------
 // const path = require('path')
 
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  actions.setWebpackConfig({
-    node: false,
-  })
-  if (stage !== `develop`) {
-    actions.setWebpackConfig({
-      resolve: {
-        alias: {
-          react: `preact/compat`,
-          'react-dom': `preact/compat`,
-          'react-dom/server': `preact/compat`,
-          'preact-compat': `preact-compat/dist/preact-compat`,
-        },
-      },
-    })
+// ----------------------------------------------------------------------------
+// ------------------------------------------------------------------ Functions
+// ----------------------------------------------------------------------------
+exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
+  if (stage === 'build-javascript') {
+    const config = getConfig()
+    const miniCssExtractPlugin = config.plugins.find(
+      plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+    )
+    if (miniCssExtractPlugin) {
+      miniCssExtractPlugin.options.ignoreOrder = true
+    }
+    actions.replaceWebpackConfig(config)
   }
 }
+
+// exports.onCreateWebpackConfig = ({ stage, actions }) => {
+//   actions.setWebpackConfig({
+//     node: false,
+//   })
+//   if (stage !== `develop`) {
+//     actions.setWebpackConfig({
+//       resolve: {
+//         alias: {
+//           react: `preact/compat`,
+//           'react-dom': `preact/compat`,
+//           'react-dom/server': `preact/compat`,
+//           'preact-compat': `preact-compat/dist/preact-compat`,
+//         },
+//       },
+//     })
+//   }
+// }
 
 // /**
 //  * Implement Gatsby's Node APIs in this file.

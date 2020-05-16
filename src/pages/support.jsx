@@ -14,9 +14,10 @@ import seoHelper from '../methods/seoHelper'
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
 // const { Fragment } = React
 const pageData = {
-  pageTitle: 'Home | Auroville Dynamics',
-  nakedPageSlug: '',
-  pageAbstract: 'Auroville Dynamics',
+  pageTitle: 'Emergency Response Machines',
+  nakedPageSlug: 'support',
+  pageAbstract:
+    'The project has been bootstrapped from small contributions given by friends and family of core team persons. To carry on we now need more funding. Please consider giving.',
 }
 
 const seoData = seoHelper(pageData)

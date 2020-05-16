@@ -35,7 +35,7 @@ module.exports = {
       options: {
         // https://www.gatsbyjs.org/packages/gatsby-plugin-webpack-bundle-analyzer/?=#options
         disable: false,
-        production: true, // analyze production?
+        production: false, // analyze production?
       },
     },
     {

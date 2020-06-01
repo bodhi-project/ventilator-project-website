@@ -36,8 +36,8 @@ const HTML = props => {
       <body id="copy">
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
-        <link rel="stylesheet" href="/third-party/qfw4udx.css" />
-        <script async src="/third-party/gtag--UA-109854711-8.js" />
+        <link rel="stylesheet" href="/third-party/typekit.css" />
+        <script async src="/third-party/ga.js" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -46,7 +46,7 @@ const HTML = props => {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', 'UA-109854711-8');
+              gtag('config', 'UA-109854711-19');
             }
             `,
           }}

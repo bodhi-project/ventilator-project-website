@@ -46,8 +46,17 @@ a.disabled {
   cursor: not-allowed;
 }
 
-p {
-  max-width: 45em;
+p,
+li {
+  max-width: 55rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #00128b;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -59,12 +68,12 @@ p {
 
 .ant-tabs-tab-active {
   & a {
-    color: #0000ff !important;
+    color: #00128b !important;
   }
 }
 
 .ant-tabs-ink-bar {
-  background-color: #0000ff !important;
+  background-color: #00128b !important;
 }
 
 .ant-tooltip-inner {
@@ -100,7 +109,7 @@ p {
       border-radius: 50% !important;
       height: 24px !important;
       width: 24px !important;
-      background-color: #0000ff !important;
+      background-color: #00128b !important;
       opacity: 1 !important;
     }
 
@@ -110,6 +119,23 @@ p {
         opacity: 1 !important;
       }
     }
+  }
+}
+
+.ant-collapse-borderless {
+  background-color: transparent !important;
+}
+
+.ant-collapse-item {
+  border-bottom: 1px solid transparent !important;
+}
+
+.ant-collapse-content-box {
+  padding-top: 0px !important;
+  padding-left: 40px !important;
+
+  & > div {
+    border-bottom: 1px solid #00128b !important;
   }
 }
 
@@ -163,69 +189,32 @@ p {
 // }
 
 /* ------------------------------------------------------------------------- */
-/* --------------------------------------------------------------- /blowfish
+/* -------------------------------------------------------------------------
 /* ------------------------------------------------------------------------- */
-[data-uri='/blowfish'] {
-  // & .ant-table-thead {
-  //   & tr {
-  //     & th {
-  //       &:nth-child(1) {
-  //         width: 15%;
-  //         flex-shrink: 0;
-  //       }
-  //       &:nth-child(2) {
-  //         width: 55%;
-  //         flex-shrink: 0;
-  //       }
-  //       &:nth-child(3) {
-  //         width: 15%;
-  //         flex-shrink: 0;
-  //       }
-  //       &:nth-child(4) {
-  //         width: 15%;
-  //         flex-shrink: 0;
-  //       }
-  //     }
-  //   }
-  // }
-  // & tr.ant-table-row {
-  //   & td {
-  //     &:nth-child(1) {
-  //       width: 15%;
-  //       flex-shrink: 0;
-  //     }
-  //     &:nth-child(2) {
-  //       width: 55%;
-  //       flex-shrink: 0;
-  //     }
-  //     &:nth-child(3) {
-  //       width: 15%;
-  //       flex-shrink: 0;
-  //     }
-  //     &:nth-child(4) {
-  //       width: 15%;
-  //       flex-shrink: 0;
-  //     }
-  //   }
-  // }
-
+[data-uri='/'],
+[data-uri='/tusky'],
+[data-uri='/notes'] {
   & .feature {
-    border: 2px solid #0000ff;
-    border-radius: 4px;
+    border: 2px solid #00128b;
+    border-radius: 8px;
     position: relative;
 
     & .gatsby-image-wrapper {
       position: relative;
       z-index: -1;
     }
+  }
+}
 
+[data-uri='/tusky'] {
+  & .feature {
     .tip {
       position: absolute;
       height: 24px;
       width: 24px;
       border-radius: 50%;
       z-index: 100;
-      background-color: #0000ff;
+      background-color: #00128b;
       transition: all 400ms ease-in;
 
       &:hover {
@@ -259,7 +248,7 @@ p {
     }
   }
 
-  .ant-tabs-tabpane {
+  & .ant-tabs-tabpane {
     & > .ant-tabs {
       & .ant-tabs-right-content {
         border: unset !important;

@@ -1,8 +1,15 @@
 [
-  { "title": "Blowfish", "link": "/blowfish/" },
+  { "title": "Tusky", "link": "/tusky/" },
   { "title": "JASAN", "link": "/jasan/" },
-  { "title": "Purifier", "link": "/purifier/" },
+  { "title": "Silly Box", "link": "/silly-box/" },
   { "title": "About", "link": "/about" },
-  { "title": "More", "menu": [{ "title": "FAQs", "link": "/faqs" }] },
+  {
+    "title": "More",
+    "menu": [
+      { "title": "People", "link": "/people" },
+      { "title": "Notes", "link": "/notes" },
+      { "title": "Disclaimer", "link": "/disclaimer" }
+    ]
+  },
   { "title": "Support", "link": "/support" }
 ]

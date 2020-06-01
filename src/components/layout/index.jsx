@@ -79,6 +79,28 @@ export const query = graphql`
       }
     }
   }
+  fragment max3000 on File {
+    childImageSharp {
+      fluid(
+        maxWidth: 900
+        quality: 80
+        srcSetBreakpoints: [
+          300
+          600
+          900
+          1200
+          1500
+          1800
+          2100
+          2400
+          2700
+          3000
+        ]
+      ) {
+        ...GatsbyImageSharpFluid_withWebp_tracedSVG
+      }
+    }
+  }
   fragment defaults on File {
     childImageSharp {
       fluid(
@@ -183,14 +205,26 @@ class Layout extends React.Component {
                     logoIconHeight={60}
                   />
                 </header>
+                <br />
                 <main role="main">{children}</main>
-                <footer style={{ borderTop: '2px solid black' }}>
+                <br />
+                <footer style={{ borderTop: '2px solid #00128b' }}>
                   <br />
-                  <p style={{ marginBottom: 0, textAlign: 'center' }}>
+                  <p
+                    style={{
+                      marginBottom: 0,
+                      textAlign: 'center',
+                      lineHeight: 1,
+                      margin: 'auto',
+                    }}
+                  >
                     <strong>Disclaimer</strong>: These prototype designs are in
-                    an experimental phase, and are{' '}
-                    <u>not medically certified for use</u>.
+                    an experimental phase,
+                    <br />
+                    and are <u>not medically certified for use</u>.{' '}
+                    <Link to="/disclaimer">Read more ⇾</Link>
                   </p>
+                  <br />
                   <MinimalFooterNavigation data={desktopMenu} Link={Link} />
                 </footer>
               </div>

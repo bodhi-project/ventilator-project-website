@@ -1,13 +1,13 @@
 {
-  "websiteName": "Emergency Response Machines",
+  "websiteName": "Inspired Machines",
   "websiteCreator": "Bodhi Project",
-  "websiteUrl": "https://www.erm.io/",
-  "nakedWebsiteUrl": "https://www.erm.io",
+  "websiteUrl": "https://www.inspiredmachines.org/",
+  "nakedWebsiteUrl": "https://www.inspiredmachines.org",
   "devUrl": "http://localhost:8000/",
   "nakedDevUrl": "http://localhost:8000",
   "websiteKeywords": "Edtech",
-  "websiteAbstract": "Emergency Response Machines from Auroville",
-  "websiteDescription": "We are looking at ed-tech, curriculums, processes and systems, connection with nature, community engagement and more. Our intention is to offer a different way, a 'better way', of doing things that is more authentic and has depth.",
+  "websiteAbstract": "Devices for the commons created by collaborative efforts in Auroville, India, since March 2020.",
+  "websiteDescription": "On the first day of the national lockdown in India because of COVID-19, a small team of individuals, mostly from Auroville, gathered quickly on Slack and Whatsapp. The task was urgent but simple: create a low-cost, low-tech ventilator with parts easily available in India, such that it could be replicated and made accessible to the vast commons for emergency use. Since then, there have emerged three teams working on different prototypes.",
   "rssUrl": "/rss.xml",
   "org": {
     "name": "Bodhi Project",
@@ -35,8 +35,8 @@
     "https://twitter.com/_dmi_systems"
   ],
   "pathPrefix": "/",
-  "copyright": "Copyright © 2018 Bodhi Project",
-  "googleAnalyticsID": "UA-109854711-2",
+  "copyright": "Copyright © 2020 Inspired Machines",
+  "googleAnalyticsID": "UA-109854711-19",
   "googleAnalyticsViewID": "182889144",
   "app": {
     "projectContext": "QKBp9oMLbyHKY63uf"

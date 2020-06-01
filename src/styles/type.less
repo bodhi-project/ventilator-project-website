@@ -1,15 +1,16 @@
 @import '~@bodhi-project/typography/lib/mixins/headingMixins.less';
 @import '~@bodhi-project/typography/lib/mixins/paragraphMixins.less';
 
+@headerFamily: "clone-rounded-latin", "times", "times new roman", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 @fontFamily: "garamond-premier-pro", "times", "times new roman", "Arial", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-.headingType(@fontFamily);
+.headingType(@headerFamily);
 
 each(@responsiveSteps, {
   .responsiveHeading(@value, @index)
 });
 
-.paragraphType(@fontFamily);
+.paragraphType(@headerFamily);
 
 each(@responsiveSteps, {
   .responsiveParagraph(@value, @index)
@@ -26,6 +27,6 @@ each(@responsiveSteps, {
   h5,
   h6,
   p {
-    line-height: 1.3;
+    line-height: 1.66;
   }
 }

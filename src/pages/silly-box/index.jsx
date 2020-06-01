@@ -14,8 +14,8 @@ import seoHelper from '../../methods/seoHelper'
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
 // const { Fragment } = React
 const pageData = {
-  pageTitle: 'Unnamed Purifier',
-  nakedPageSlug: 'purifier',
+  pageTitle: 'Silly Box Air Purifier',
+  nakedPageSlug: 'silly-box',
   pageAbstract: 'Coming soon.',
 }
 

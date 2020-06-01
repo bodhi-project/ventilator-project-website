@@ -1,16 +1,16 @@
 {
-  "name": "@bodhi-project/web-template-style2",
-  "description": "Web template style #2",
+  "name": "@bodhi-project/ventilator-project-website",
+  "description": "Ventilator Project Website",
   "version": "0.0.1",
   "author": {
     "name": "Bodhi Project",
     "email": "hello@bodhiproject.org",
     "url": "https://www.bodhiproject.org/"
   },
-  "homepage": "https://starter.bodhiproject.org/",
+  "homepage": "https://www.inspiredmachines.org/",
   "repository": {
     "type": "git",
-    "url": "git@github.com:bodhi-project/web-template-style2.git"
+    "url": "git@github.com:bodhi-project/ventilator-project-website.git"
   },
   "keywords": [
     "gatsby"

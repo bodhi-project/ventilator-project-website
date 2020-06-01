@@ -5,10 +5,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import startsWith from 'lodash/startsWith'
+import isUndefined from 'lodash/isUndefined'
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
 import { Link as GatsbyLink } from 'gatsby'
 
-import OutLink from '@bodhi-project/components/lib/Outlink'
+import Outlink from '@bodhi-project/components/lib/outlink'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
@@ -19,15 +22,19 @@ const { Fragment } = React
 // ----------------------------------------------------------------------------
 /** Link */
 const Link = ({ to, children, ...props }) => {
-  const isOutLink = to.startsWith('http') || to.startsWith('https')
-  const isHashLink = to.startsWith('#') || typeof to === 'undefined'
+  const thatTo = isUndefined(to) ? '#' : to
+  const isOutLink =
+    thatTo.startsWith('http') ||
+    thatTo.startsWith('https') ||
+    thatTo.startsWith('mailto:')
+  const isHashLink = startsWith(thatTo, '#') || isUndefined(thatTo)
 
   return (
     <Fragment>
       {isOutLink === true ? (
-        <OutLink to={to} {...props}>
+        <Outlink to={thatTo} {...props}>
           {children}
-        </OutLink>
+        </Outlink>
       ) : (
         <Fragment>
           {isHashLink === true ? (
@@ -35,7 +42,7 @@ const Link = ({ to, children, ...props }) => {
               {children}
             </a>
           ) : (
-            <GatsbyLink to={to} {...props}>
+            <GatsbyLink to={thatTo} {...props}>
               {children}
             </GatsbyLink>
           )}
@@ -49,7 +56,5 @@ Link.propTypes = {
   to: PropTypes.string,
 }
 
-// ----------------------------------------------------------------------------
 // --------------------------------------------------------------------- Export
-// ----------------------------------------------------------------------------
 export default Link

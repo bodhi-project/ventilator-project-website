@@ -142,7 +142,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`, // https://www.npmjs.com/package/gatsby-plugin-favicon
       options: {
-        logo: './src/images/logos/logo.png',
+        logo: './src/images/logos/favicon.png',
         // WebApp Manifest Configuration
         appName: data.websiteName,
         appDescription: data.websiteDescription,
@@ -176,12 +176,12 @@ module.exports = {
         siteUrl,
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-sri`, // https://www.gatsbyjs.org/packages/gatsby-plugin-sri
-    //   options: {
-    //     hash: 'sha512',
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-sri`, // https://www.gatsbyjs.org/packages/gatsby-plugin-sri
+      options: {
+        hash: 'sha512',
+      },
+    },
     {
       resolve: `gatsby-plugin-zopfli`, // https://www.gatsbyjs.org/packages/gatsby-plugin-zopfli
     },

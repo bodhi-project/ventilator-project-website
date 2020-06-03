@@ -97,36 +97,43 @@ class Page extends React.Component {
           commons for emergency use.&nbsp;<Link to="/about">Read more ⇾</Link>
         </p>
         <p>
-          Since then, there have emerged three teams working on different
-          prototypes ⇾
+          The ventilator devices may offer a chance of survival to patients who
+          do not have access to a more sophisticated artificial ventilator due
+          to shortage of supply or absence in remote areas.
+        </p>
+        <p>
+          Since we started, there have emerged three teams working on three
+          different ideas ⇾
         </p>
         <Division byThree className="margin-p">
           <div>
             <h3>Tusky Ventilator</h3>
             <p style={{ marginBottom: 0 }}>
               A low-cost, low-tech, portable, mechanised and non-invasive
-              ventilator design that cannot get any simpler. For patients in
-              transit and home use.
+              ventilator design that cannot get any simpler. For hospital and
+              home use.
               <br />
-              <Link to="/about">Read more ⇾</Link>
+              <Link to="/tusky">Read more ⇾</Link>
             </p>
           </div>
           <div>
             <h3>JASAN Ventilator</h3>
             <p style={{ marginBottom: 0 }}>
-              A cost-effective, compact, mechanised and non-invasive ventilator
-              with an innovative and revolutionary design for hospital use.
+              The JASAN ventilator is a cost-effective, compact, mechanised
+              ventilator designed for both invasive and non-invasive ventilation
+              with a unique design.
               <br />
-              <Link to="/about">Read more ⇾</Link>
+              <Link to="/jasan">Read more ⇾</Link>
             </p>
           </div>
           <div>
             <h3>Silly Box Air Purifier</h3>
             <p style={{ marginBottom: 0 }}>
-              A affordable, negative-ion air-purifier-in-a-box that can be
-              deployed in hospitals and homes.
+              An affordable, negative-ion tissue-box sized air-purifier that can
+              zap pretty much everything, and can be deployed in hospitals and
+              homes.
               <br />
-              <Link to="/about">Read more ⇾</Link>
+              <Link to="/silly-box">Read more ⇾</Link>
             </p>
           </div>
         </Division>

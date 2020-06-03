@@ -90,7 +90,8 @@ class Page extends React.Component {
           respective creators will hold rights and licences for the devices, and
           will choose whether to publish their designs and work as an
           open-source project, or to develop their project commercially.
-          Regardless of the approach
+          Regardless of the approach the intention of the project is to create
+          something for the commons.
         </p>
 
         <h3>Help offers</h3>

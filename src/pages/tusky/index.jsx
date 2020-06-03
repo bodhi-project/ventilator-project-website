@@ -143,6 +143,66 @@ const data = [
             marginBottom: 8,
           }}
         />
+        Pressure Control Ventilation&nbsp;
+        <Tooltip
+          title={
+            <p>
+              <small>
+                This mode is only acceptable if the tidal-volume delivered is
+                clearly displayed and the user can set patient-specific upper
+                and lower tidal-volume alarms to alert to the need to adjust the
+                pressure.
+              </small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="rgba(0, 0, 0, 0.65)"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        Pressure & Volume Control Ventilation&nbsp;
+        <Tooltip
+          title={
+            <p>
+              <small>
+                The system delivers a set pressure for the period of inspiration
+                and the volume achieved is measured and displayed.
+              </small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="rgba(0, 0, 0, 0.65)"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
         Assist Control&nbsp;
         <Tooltip
           title={
@@ -188,6 +248,40 @@ const data = [
             marginBottom: 8,
           }}
         />
+        <CheckCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#008900"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <CheckCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#008900"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
         <XCircleIcon
           width={18}
           height={18}
@@ -203,6 +297,40 @@ const data = [
     ),
     v2: (
       <span className="mask-p">
+        <CheckCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#008900"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <CheckCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#008900"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
         <CheckCircleIcon
           width={18}
           height={18}
@@ -858,6 +986,242 @@ const data = [
       </span>
     ),
   },
+  {
+    key: '3',
+    parameter: (
+      <span className="mask-p">
+        SpO2&nbsp;
+        <Tooltip
+          title={
+            <p>
+              <small>
+                SpO2, also known as oxygen saturation, is a measure of the
+                amount of oxygen-carrying hemoglobin in the blood relative to
+                the amount of hemoglobin not carrying oxygen.
+              </small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="rgba(0, 0, 0, 0.65)"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+      </span>
+    ),
+    required: <span className="mask-p">Optional</span>,
+    v1: (
+      <span className="mask-p">
+        <XCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#670000"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+      </span>
+    ),
+    v2: (
+      <span className="mask-p">
+        <XCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#670000"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+      </span>
+    ),
+  },
+  {
+    key: '3',
+    parameter: <span className="mask-p">Monitoring</span>,
+    required: (
+      <span className="mask-p">
+        Display
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        Flow sensing/display
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        Pressure sensing/display
+      </span>
+    ),
+    v1: (
+      <span className="mask-p">
+        <Tooltip
+          title={
+            <p>
+              <small>Visual monitoring</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#e6c200"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>Visual display</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#e6c200"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>Visual display</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#e6c200"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+      </span>
+    ),
+    v2: (
+      <span className="mask-p">
+        <Tooltip
+          title={
+            <p>
+              <small>
+                Through external LCD-TFT Display. Display apparatus connects to
+                sensors in the machine via bluetooth. Optionally, an android
+                application is available which allows controls at the push of a
+                button.
+              </small>
+            </p>
+          }
+        >
+          <CheckCircleIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#008900"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>
+                Venturi type differential sensor. Provides inspiratory and
+                expiratory volumes.
+              </small>
+            </p>
+          }
+        >
+          <CheckCircleIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#008900"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>
+                Can detect and display 0-60 cmH2O pressure range in patient
+                circuit.
+              </small>
+            </p>
+          }
+        >
+          <CheckCircleIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#008900"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+      </span>
+    ),
+  },
 ]
 
 // ----------------------------------------------------------------------------
@@ -1005,7 +1369,6 @@ class Page extends React.Component {
                     <p style={{ marginBottom: 0 }}>
                       <strong>Chassis</strong>, built out of laser-cut acrylic
                       or aluminium, and includes multiple 3D printed components.
-                      Measures ? X ? X ? inches (? x ? x ? mm) and weighes ? kg.
                     </p>
                   }
                 >
@@ -1069,10 +1432,7 @@ class Page extends React.Component {
               Tusky is a low-cost, low-tech, portable, mechanised, non-invasive
               resuscitator that automates the process of manual ventilation for
               patients in situations where not enough ventilators are available
-              or in resource-constrained environments. The device may offer a
-              chance of survival to patients who do not have access to a more
-              sophisticated artificial ventilator due to shortage of supply or
-              absence in remote areas.
+              or in resource-constrained environments.
             </p>
             <p>
               Developed by a group of individuals from Auroville, with the

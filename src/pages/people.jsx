@@ -76,7 +76,7 @@ class Page extends React.Component {
         <h3>Support team</h3>
         <p>Banu, Jothi Prasad, Pranav and Loretta</p>
         <h3>Support network</h3>
-        <p>Prassana, Anoo, Sarath, Dinesh, Kim, Sivakumar and Bram</p>
+        <p>Prassana, Anoo, Sarath, Dinesh, Kim, Sivakumar, Bram and Franz </p>
       </StandardPage>
     )
   }

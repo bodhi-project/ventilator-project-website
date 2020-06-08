@@ -69,14 +69,11 @@ class Page extends React.Component {
       <StandardPage seoData={seoData} {...this.props}>
         <div className="feature margin-p">
           <Img fluid={this.props.data.banner.childImageSharp.fluid} />
-          <div style={{ position: 'absolute', top: 4, left: 30 }}>
-            <h1 style={{ color: '#00128b', lineHeight: '1', marginBottom: 18 }}>
-              <span style={{ fontSize: '125%' }}>INSPIRED MACHINES</span>
+          <div className="intro">
+            <h1>
+              <span>INSPIRED MACHINES</span>
             </h1>
-            <p
-              className="mask-h5"
-              style={{ color: '#00128b', lineHeight: '1.1' }}
-            >
+            <p className="mask-h5">
               Devices for the commons
               <br />
               created by collaborative efforts
@@ -148,15 +145,15 @@ class Page extends React.Component {
               marginBottom: 16,
             }}
           >
-            You can support us
+            Please support us
           </h3>
           <p
             style={{
-              width: '55%',
               margin: 'auto',
               textAlign: 'center',
               marginBottom: 0,
             }}
+            className="support"
           >
             A small community has emerged around these ideas spontaneously. We
             are working passionately and round-the-clock on these machines. The

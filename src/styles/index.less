@@ -139,6 +139,10 @@ h5 {
   }
 }
 
+.ant-table-cell {
+  padding: 8px !important;
+}
+
 // .ant-table-content > table {
 //   table-layout: fixed !important;
 // }
@@ -193,20 +197,67 @@ h5 {
 /* ------------------------------------------------------------------------- */
 [data-uri='/'],
 [data-uri='/tusky'],
-[data-uri='/notes'] {
+[data-uri='/notes'],
+[data-uri='/jasan'] {
   & .feature {
     border: 2px solid #00128b;
     border-radius: 8px;
     position: relative;
 
+    @media (max-width: 991px) {
+      border-color: rgba(0, 18, 139, 0.4);
+    }
+
     & .gatsby-image-wrapper {
       position: relative;
       z-index: -1;
+
+      @media (max-width: 991px) {
+        opacity: 0.3;
+      }
+    }
+
+    & .intro {
+      position: absolute;
+      top: 4px;
+      left: 30px;
+
+      @media (max-width: 991px) {
+        left: 10px;
+      }
+
+      & h1 {
+        color: #00128b;
+        line-height: 1 !important;
+        margin-bottom: 18px;
+
+        & span {
+          font-size: 125%;
+
+          @media (max-width: 991px) {
+            font-size: 105%;
+          }
+        }
+      }
+
+      & p {
+        color: #00128b;
+        line-height: 1.1 !important;
+      }
+    }
+  }
+
+  & p.support {
+    width: 55%;
+
+    @media (max-width: 991px) {
+      width: 90%;
     }
   }
 }
 
-[data-uri='/tusky'] {
+[data-uri='/tusky'],
+[data-uri='/jasan'] {
   & .feature {
     .tip {
       position: absolute;
@@ -259,15 +310,22 @@ h5 {
       }
 
       & .ant-tabs-bar {
-        width: 37.5% !important;
+        @media (min-width: 991px) {
+          width: 25% !important;
+        }
 
         & .ant-tabs-tab {
           text-align: left !important;
           padding-left: 36px !important;
 
           & a {
-            line-height: 1 !important;
+            line-height: 1.1 !important;
+            display: block;
             text-align: left !important;
+
+            & span {
+              word-break: break-all;
+            }
           }
         }
       }

@@ -941,9 +941,8 @@ class Page extends React.Component {
               <Timeline.Item color="#ffd700">
                 <p>
                   <strong>
-                    5KV shall pass through that little 3D printed component, and
-                    also the circuit diagram of the device (last week of May,
-                    2020)
+                    5KV shall pass through that little 3D printed component
+                    (last week of May, 2020)
                   </strong>
                 </p>
                 <div className="mask-p">

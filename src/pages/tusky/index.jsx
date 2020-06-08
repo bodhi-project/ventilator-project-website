@@ -69,19 +69,19 @@ const columns = [
     title: 'Minimum Required Setting/Value/Range',
     dataIndex: 'required',
     key: 'required',
-    width: '55%',
+    width: '45%',
   },
   {
     title: 'v1',
     dataIndex: 'v1',
     key: 'v1',
-    width: '10%',
+    width: '15%',
   },
   {
     title: 'v2',
     key: 'v2',
     dataIndex: 'v2',
-    width: '10%',
+    width: '15%',
   },
 ]
 
@@ -1145,20 +1145,17 @@ const data = [
           title={
             <p>
               <small>
-                Through external LCD-TFT Display. Display apparatus connects to
-                sensors in the machine via bluetooth. Optionally, an android
-                application is available which allows controls at the push of a
-                button.
+                Visual dsiplay, also planned through sensors and TFD display.
               </small>
             </p>
           }
         >
-          <CheckCircleIcon
+          <InfoIcon
             width={18}
             height={18}
             viewBox="0 0 26 26"
             fill="none"
-            stroke="#008900"
+            stroke="#e6c200"
             strokeWidth="3"
             style={{ verticalAlign: 'middle' }}
           />
@@ -1175,18 +1172,17 @@ const data = [
           title={
             <p>
               <small>
-                Venturi type differential sensor. Provides inspiratory and
-                expiratory volumes.
+                Visual dsiplay, also planned through sensors and TFD display.
               </small>
             </p>
           }
         >
-          <CheckCircleIcon
+          <InfoIcon
             width={18}
             height={18}
             viewBox="0 0 26 26"
             fill="none"
-            stroke="#008900"
+            stroke="#e6c200"
             strokeWidth="3"
             style={{ verticalAlign: 'middle' }}
           />
@@ -1203,21 +1199,219 @@ const data = [
           title={
             <p>
               <small>
-                Can detect and display 0-60 cmH2O pressure range in patient
-                circuit.
+                Visual dsiplay, also planned through sensors and TFD display.
               </small>
             </p>
           }
         >
-          <CheckCircleIcon
+          <InfoIcon
             width={18}
             height={18}
             viewBox="0 0 26 26"
             fill="none"
-            stroke="#008900"
+            stroke="#e6c200"
             strokeWidth="3"
             style={{ verticalAlign: 'middle' }}
           />
+        </Tooltip>
+      </span>
+    ),
+  },
+  {
+    key: '3',
+    parameter: <span className="mask-p">Alarms</span>,
+    required: (
+      <span className="mask-p">
+        Over-pressure&nbsp;
+        <Tooltip
+          title={
+            <p>
+              <small>Inspiratory airway pressure exceeded.</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="rgba(0, 0, 0, 0.65)"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        Under-pressure&nbsp;
+        <Tooltip
+          title={
+            <p>
+              <small>
+                Inspiratory and PEEP pressure not achieved (equivalent to
+                disconnection alarm).
+              </small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="rgba(0, 0, 0, 0.65)"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+      </span>
+    ),
+    v1: (
+      <span className="mask-p">
+        <XCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#670000"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <XCircleIcon
+          width={18}
+          height={18}
+          viewBox="0 0 26 26"
+          fill="none"
+          stroke="#670000"
+          strokeWidth="3"
+          style={{ verticalAlign: 'middle' }}
+        />
+      </span>
+    ),
+    v2: (
+      <span className="mask-p">
+        <Tooltip
+          title={
+            <p>
+              <small>Planned.</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#e6c200"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>Planned.</small>
+            </p>
+          }
+        >
+          <InfoIcon
+            width={18}
+            height={18}
+            viewBox="0 0 26 26"
+            fill="none"
+            stroke="#e6c200"
+            strokeWidth="3"
+            style={{ verticalAlign: 'middle' }}
+          />
+        </Tooltip>
+      </span>
+    ),
+  },
+  {
+    key: '3',
+    parameter: <span className="mask-p">Electricity supply</span>,
+    required: (
+      <span className="mask-p">
+        Power consumption
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        Battery backup
+      </span>
+    ),
+    v1: (
+      <span className="mask-p">
+        &#60;40W
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>
+                6 hours with a standard battery that can be attached to the
+                device
+              </small>
+            </p>
+          }
+        >
+          6h
+        </Tooltip>
+      </span>
+    ),
+    v2: (
+      <span className="mask-p">
+        &#60;40W
+        <hr
+          style={{
+            border: 'unset',
+            borderTop: '1px solid rgba(0, 0, 0, 0.1234)',
+            marginTop: 10,
+            marginBottom: 8,
+          }}
+        />
+        <Tooltip
+          title={
+            <p>
+              <small>
+                6 hours to 1 week with a standard battery that can be attached
+                to the device depending on the battery size
+              </small>
+            </p>
+          }
+        >
+          6h - 1w
         </Tooltip>
       </span>
     ),

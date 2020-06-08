@@ -88,7 +88,7 @@ class Page extends React.Component {
                 <Link to="https://www.pubinv.org/">Public Invention</Link>
                 &nbsp;(shown below) to be a good means to quickly inform others
                 of our progress, and this is what we have adopted at the moment
-                to report the status of ventilator the prototypes.
+                to report the status of the ventilator prototypes.
               </p>
               <div
                 className="margin-p"

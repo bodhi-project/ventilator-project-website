@@ -104,7 +104,7 @@ class Page extends React.Component {
           </Link>
           ).
         </p>
-        <h3>For antything else...</h3>
+        <h3>For anything else...</h3>
         <p>
           Please be aware that we might take some to time to reply, we are
           working hard and that is taking much of our time right now. If you

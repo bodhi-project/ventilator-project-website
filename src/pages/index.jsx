@@ -127,11 +127,11 @@ class Page extends React.Component {
             </p>
           </div>
           <div>
-            <h3>Silly Box Air Purifier</h3>
+            <h3>Silly Box Purifier</h3>
             <p style={{ marginBottom: 0 }}>
-              An affordable, negative-ion tissue-box sized air-purifier that can
-              zap pretty much everything, and can be deployed in hospitals and
-              homes.
+              An affordable, low-tech, negative-ion air-purifier the size of a
+              tissue box that can zap <i>everything</i>, and can be deployed in
+              hospitals and homes.
               <br />
               <Link to="/silly-box">Read more ⇾</Link>
             </p>

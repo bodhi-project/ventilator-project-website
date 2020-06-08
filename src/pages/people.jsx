@@ -48,7 +48,7 @@ class Page extends React.Component {
       <StandardPage seoData={seoData} {...this.props}>
         <h3>Prototyping teams</h3>
         <p>
-          <strong>Tusky Ventilator</strong> – Sumvit (of{' '}
+          <strong>Tusky Ventilator</strong> – Samvit (of{' '}
           <Link to="http://light-fish.com/index.html">Light Fish</Link>)
           supported by Akash and Karthik
         </p>
@@ -66,7 +66,9 @@ class Page extends React.Component {
           <strong>Silly Box Air Purifier</strong> - Karthik, supported by Sumvit
         </p>
         <h3>Medical advising team</h3>
-        <p>Dr. Hasan from Pondicherry Institute of Medical Sciences</p>
+        <p>
+          Dr. Hasan and Aneesh from Pondicherry Institute of Medical Sciences
+        </p>
         <p>Dr. Shanu from Auroville Health Centre</p>
         <p>Surya from Auroville Dental Clinic</p>
         <h3>Documentation team</h3>

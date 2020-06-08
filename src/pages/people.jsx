@@ -66,7 +66,9 @@ class Page extends React.Component {
           <strong>Silly Box Air Purifier</strong> - Karthik, supported by Sumvit
         </p>
         <h3>Medical advising team</h3>
-        <p>Dr. Hasan from Pondicherry Institute of Medical Sciences</p>
+        <p>
+          Dr. Hasan and Aneesh from Pondicherry Institute of Medical Sciences
+        </p>
         <p>Dr. Shanu from Auroville Health Centre</p>
         <p>Surya from Auroville Dental Clinic</p>
         <h3>Documentation team</h3>
@@ -74,7 +76,7 @@ class Page extends React.Component {
         <h3>Support team</h3>
         <p>Banu, Jothi Prasad, Pranav and Loretta</p>
         <h3>Support network</h3>
-        <p>Prassana, Anoo, Sarath, Dinesh, Kim, Sivakumar and Bram</p>
+        <p>Prassana, Anoo, Sarath, Dinesh, Kim, Sivakumar, Bram and Franz </p>
       </StandardPage>
     )
   }

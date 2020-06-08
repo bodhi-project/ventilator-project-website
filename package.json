@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@bodhi-project/antrd": "2.0.0",
-    "@bodhi-project/components": "6.2.0",
+    "@bodhi-project/components": "6.4.0",
     "@bodhi-project/react-text-loop": "^2.0.2",
     "@bodhi-project/semantic-webflow": "0.0.13",
     "@bodhi-project/seo": "3.0.1",

@@ -9,6 +9,8 @@ import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Video from '@bodhi-project/components/lib/video'
+import '@bodhi-project/components/lib/video/style.less'
+
 import Gallery from 'react-photo-gallery'
 import MediaQuery from 'react-responsive'
 import GalleryX from '@bodhi-project/components/lib/gatsby/Gallery'
@@ -1486,13 +1488,7 @@ export const query = graphql`
     doc4: file(relativePath: { eq: "tusky/timeline/photo25.jpeg" }) {
       ...max900
     }
-    doc2: file(relativePath: { eq: "tusky/timeline/photo23.jpeg" }) {
-      ...max900
-    }
-    doc3: file(relativePath: { eq: "tusky/timeline/photo24.jpeg" }) {
-      ...max900
-    }
-    doc1: file(relativePath: { eq: "tusky/timeline/photo22.jpeg" }) {
+    doc2: file(relativePath: { eq: "tusky/timeline/photo22.jpeg" }) {
       ...max900
     }
     process: file(
@@ -1702,124 +1698,19 @@ class Page extends React.Component {
                     href="#"
                     className="mask-p"
                     onClick={e => e.preventDefault()}
+                    style={{ marginBottom: 0 }}
                   >
-                    Walkthrough
+                    Meet Tusky
                     <br />
                     <small>The machine in operation</small>
                   </a>
                 }
               >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=cn9cSBCQ5BA" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="12"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Ventilation Modes
-                    <br />
-                    <small>Volume controlled ventilation</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=hVYcsUnKByk" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="13"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Controls
-                    <br />
-                    <small>Controlling pressure and breath rate</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=cuCqn07EOKk" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="14"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Filtration
-                    <br />
-                    <small>Air filtration options</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=uDd3iupKUyI" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="15"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Infection Control
-                    <br />
-                    <small>Infection control for the machine</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=luM6oeCM7Yw" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="16"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Monitoring and Alarms
-                    <br />
-                    <small>Monitoring and alarm systems</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=0Bhiy0797qo" /> */}
-                </div>
-              </TabPane>
-              <TabPane
-                key="17"
-                tab={
-                  <a
-                    href="#"
-                    className="mask-p"
-                    onClick={e => e.preventDefault()}
-                  >
-                    Biological Safety
-                    <br />
-                    <small>Materials used and safety considerations</small>
-                  </a>
-                }
-              >
-                <div style={{ maxWidth: '45rem' }} className="margin-p">
-                  {/* <Video url="https://www.youtube.com/watch?v=L3b-FB_2-nk" /> */}
-                </div>
+                <Video
+                  className="margin-p"
+                  ratio={0.57200057}
+                  url="https://vimeo.com/426941888"
+                />
               </TabPane>
             </Tabs>
           </TabPane>

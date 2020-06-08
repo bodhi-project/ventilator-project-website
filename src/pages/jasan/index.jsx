@@ -9,6 +9,8 @@ import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Video from '@bodhi-project/components/lib/video'
+import '@bodhi-project/components/lib/video/style.less'
+
 import Gallery from 'react-photo-gallery'
 import MediaQuery from 'react-responsive'
 import GalleryX from '@bodhi-project/components/lib/gatsby/Gallery'
@@ -37,6 +39,10 @@ import '@bodhi-project/antrd/lib/just-futura/4.1.4/timeline/style/css'
 import InfoIcon from 'react-feather/dist/icons/info'
 import CheckCircleIcon from 'react-feather/dist/icons/check-circle'
 import XCircleIcon from 'react-feather/dist/icons/x-circle'
+
+import Division from '@bodhi-project/components/lib/division'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/row/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/col/style/css'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import Link from '../../components/Link'
@@ -1952,6 +1958,12 @@ export const query = graphql`
     feature1: file(relativePath: { eq: "tusky/feature1.jpg" }) {
       ...max1500
     }
+    doc3: file(relativePath: { eq: "tusky/timeline/photo24.jpeg" }) {
+      ...max900
+    }
+    doc1: file(relativePath: { eq: "tusky/timeline/photo23.jpeg" }) {
+      ...max900
+    }
   }
 `
 
@@ -2056,6 +2068,27 @@ class Page extends React.Component {
                           href="#"
                           className="mask-p"
                           onClick={e => e.preventDefault()}
+                          style={{ marginBottom: 0 }}
+                        >
+                          Meet JASAN
+                          <br />
+                          <small>The machine in operation</small>
+                        </a>
+                      }
+                    >
+                      <Video
+                        ratio={0.57200057}
+                        url="https://vimeo.com/426934352"
+                        className="margin-p"
+                      />
+                    </TabPane>
+                    <TabPane
+                      key="12"
+                      tab={
+                        <a
+                          href="#"
+                          className="mask-p"
+                          onClick={e => e.preventDefault()}
                         >
                           <span>Compliances</span>
                           <br />
@@ -2153,6 +2186,41 @@ class Page extends React.Component {
                   parameters such as pressure and volume curves, peak pressure,
                   breathing rate and PEEP pressure.
                 </p>
+              </Timeline.Item>
+              <Timeline.Item color="#00128B">
+                <p>
+                  <strong>
+                    Collaboration with Dr. Hasan of PIMS emerges (second week of
+                    April, 2020)
+                  </strong>
+                </p>
+                <div className="mask-p">
+                  <GalleryX
+                    data={this.props.data}
+                    lookup="doc"
+                    columns={{ min: 2, max: 2 }}
+                    Img={Img}
+                    Gallery={Gallery}
+                    MediaQuery={MediaQuery}
+                  />
+                </div>
+              </Timeline.Item>
+              <Timeline.Item color="#ffd700">
+                <p>
+                  <strong>Early efforts (month of April, 2020)</strong>
+                </p>
+                <Division className="margin-p">
+                  <Video
+                    ratio={0.54999261}
+                    url="https://vimeo.com/427073109"
+                    style={{ background: 'unset' }}
+                  />
+                  <Video
+                    ratio={0.54999261}
+                    url="https://vimeo.com/427073746"
+                    style={{ background: 'unset' }}
+                  />
+                </Division>
               </Timeline.Item>
               <Timeline.Item color="#00128B">
                 <p>

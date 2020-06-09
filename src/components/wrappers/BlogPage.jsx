@@ -15,7 +15,13 @@ import { FacebookProvider, Like as FBLike } from 'react-facebook'
 import PrevNext from '@bodhi-project/components/lib/prev-next'
 
 import Breadcrumb from 'antd/lib/breadcrumb'
-import '@bodhi-project/antrd/lib/restorative-auroville/3.10.0/breadcrumb/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/breadcrumb/style/css'
+
+import DisqusComments from '@bodhi-project/components/lib/disqus'
+
+import Collapse from 'antd/lib/collapse'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/collapse/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/icon/style/css'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import Link from '../Link'
@@ -95,7 +101,7 @@ const Page = props => {
             <FacebookProvider appId="218604115574634">
               <FBLike
                 href={withUrl(route, data)}
-                colorScheme="dark"
+                colorScheme="light"
                 share
                 showFaces
               />
@@ -103,7 +109,32 @@ const Page = props => {
           </div>
         </Header>
         {children}
-        <Footer style={{ borderTop: '1px dotted #00006F' }}>
+        <div style={{ borderTop: '2px dotted #00128b' }}>
+          <br />
+          <DisqusComments
+            data={{
+              websiteUrl: 'https://www.inspiredmachines.org/',
+              disqusConfig: {
+                disqusShortname: 'inspired-machines',
+              },
+            }}
+            pageData={pageData}
+            text={[
+              <p>
+                <strong>
+                  Please stay on topic and keep your comments relevant and
+                  practical, so that other readers can also benefit from the
+                  exchange.
+                </strong>
+              </p>,
+            ]}
+            collapsible={false}
+            Collapse={Collapse}
+            titleClassname="mask-h4"
+          />
+          <br />
+        </div>
+        <Footer style={{ borderTop: '2px dotted #00128b' }}>
           <h1 className="mask-h4">More articles</h1>
           <PrevNext next={next} prev={prev} Link={Link} />
         </Footer>

@@ -304,10 +304,8 @@ class Page extends React.Component {
               The challenge right now is to fully execute and follow the project
               through. The next "big" step for each of the prototypes would be
               to have a medically viable device, and then to undergo and pass
-              clinical tests in-vitro and in-vivo. Once that is achieved we
-              would then need to get the relevant certifications and
-              medico-legal approvals. We have to discover this process, and we
-              don't know yet how much time this will take.
+              tests. Once that is achieved we would then need to start the
+              certifications process with ICMR.
             </p>
             <p style={{ marginBottom: 0 }}>
               We will keep on posting updates in this space as the project

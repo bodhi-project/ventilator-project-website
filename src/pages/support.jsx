@@ -121,13 +121,16 @@ class Page extends React.Component {
           support to the project...
         </p>
         <ul className="mask-p" style={{ paddingLeft: 30, listStyle: 'disc' }}>
-          <li>Dr. Srinivasan</li>
-          <li>Mangal</li>
+          <li>Dr. V S Srinivasan</li>
+          <li>Dr. Saurabh Srinivasan</li>
+          <li>Dr. Rajendra Prasad</li>
+          <li>Mr. Mangal</li>
           <li>Dr. Brijesh Kumar</li>
-          <li>Hitendra N. Jha</li>
-          <li>Gurucharan Singh</li>
-          <li>Uma and Neeraj</li>
-          <li>Chintoo and Varun</li>
+          <li>Dr. Hitendra N. Jha</li>
+          <li>Mr. Gurucharan Singh</li>
+          <li>Mr. Om Prakash Sharma</li>
+          <li>Ms. Chintoo</li>
+          <li>Mr. Arunendra P. Sharma</li>
         </ul>
       </StandardPage>
     )

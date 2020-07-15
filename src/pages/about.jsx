@@ -179,7 +179,7 @@ class Page extends React.Component {
               plates, such a device could be used to lower (and ideally
               eliminate) airborne viral infections. And thus emerged the{' '}
               <strong>
-                <Link to="/silly-box">Silly Box Air Purifier.</Link>
+                <Link to="/box-purifier">Box Purifier.</Link>
               </strong>
             </p>
           </Timeline.Item>
@@ -211,10 +211,9 @@ class Page extends React.Component {
               designs in the next twelve-sixteen weeks.
             </p>
             <p>
-              The <strong>Silly Box Air Purifier</strong> is in design phase and
-              there is not yet a mature first prototype. We foresee (and again,
-              hope) that the first prototype will emerge in the next two-three
-              weeks.
+              The <strong>Box Purifier</strong> is in design phase and there is
+              not yet a mature first prototype. We foresee (and again, hope)
+              that the first prototype will emerge in the next two-three weeks.
             </p>
           </Timeline.Item>
           <Timeline.Item color="#ffd700">

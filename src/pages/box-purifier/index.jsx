@@ -50,8 +50,8 @@ import seoHelper from '../../methods/seoHelper'
 const { Fragment } = React
 const { TabPane } = Tabs
 const pageData = {
-  pageTitle: 'Silly Box Air Purifier',
-  nakedPageSlug: 'silly-box',
+  pageTitle: 'Box Purifier',
+  nakedPageSlug: 'box-purifier',
   pageAbstract: 'Coming soon.',
 }
 
@@ -867,10 +867,10 @@ export const query = graphql`
     feature1: file(relativePath: { eq: "tusky/feature1.jpg" }) {
       ...max1500
     }
-    p11: file(relativePath: { eq: "silly-box/p1.jpg" }) {
+    p11: file(relativePath: { eq: "box-purifier/p1.jpg" }) {
       ...max1500
     }
-    p12: file(relativePath: { eq: "silly-box/p2.jpg" }) {
+    p12: file(relativePath: { eq: "box-purifier/p2.jpg" }) {
       ...max1500
     }
   }
@@ -909,10 +909,9 @@ class Page extends React.Component {
             key="1"
           >
             <p>
-              The Silly Box Air purifier is a room ionizer that removes
-              microscopic particles from the air instead of using fans and
-              filters, by generating negative ions and releasing those into the
-              air.
+              The Box Purifier is a room ionizer that removes microscopic
+              particles from the air instead of using fans and filters, by
+              generating negative ions and releasing those into the air.
             </p>
             <p>
               The device can purify air that could leave a room healthy

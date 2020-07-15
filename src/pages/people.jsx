@@ -63,7 +63,7 @@ class Page extends React.Component {
           <Link to="https://aquadynauroville.com/site/en/">Aqua Dyn</Link>)
         </p>
         <p>
-          <strong>Silly Box Air Purifier</strong> - Karthik, supported by Sumvit
+          <strong>Box Purifier</strong> - Karthik, supported by Sumvit
         </p>
         <h3>Medical advising team</h3>
         <p>

@@ -1964,6 +1964,18 @@ export const query = graphql`
     doc1: file(relativePath: { eq: "tusky/timeline/photo23.jpeg" }) {
       ...max900
     }
+    g12: file(relativePath: { eq: "jasan/img2.jpeg" }) {
+      ...max900
+    }
+    g11: file(relativePath: { eq: "jasan/img1.jpeg" }) {
+      ...max900
+    }
+    g13: file(relativePath: { eq: "jasan/img3.jpeg" }) {
+      ...max900
+    }
+    img4: file(relativePath: { eq: "jasan/img4.jpeg" }) {
+      ...max900
+    }
   }
 `
 
@@ -1999,6 +2011,11 @@ class Page extends React.Component {
             }
             key="1"
           >
+            <Carousel>
+              <div className="feature">
+                <Img fluid={this.props.data.img4.childImageSharp.fluid} />
+              </div>
+            </Carousel>
             <p>
               The JASAN ventilator is a cost-effective, compact, mechanised
               ventilator designed for both invasive and non-invasive ventilation
@@ -2013,11 +2030,8 @@ class Page extends React.Component {
               work much harder!
             </p>
             <p>
-              We're in Stage 2 at the moment &nbsp;(
-              <Link to="/notes">read note on self-reporting</Link>). At the
-              moment we have a working prototype, and we are collaborating with
-              medical professionals to iterate until the prototype is medically
-              worthy.
+              The JASAN team is happy to report that it is collaborating with
+              industry experts and partners to bring this device to hospitals.
             </p>
           </TabPane>
           <TabPane
@@ -2084,6 +2098,27 @@ class Page extends React.Component {
                     </TabPane>
                     <TabPane
                       key="12"
+                      tab={
+                        <a
+                          href="#"
+                          className="mask-p"
+                          onClick={e => e.preventDefault()}
+                          style={{ marginBottom: 0 }}
+                        >
+                          JASAN Documentary
+                          <br />
+                          <small>A one-hour feature</small>
+                        </a>
+                      }
+                    >
+                      <Video
+                        ratio={0.57200057}
+                        url="https://vimeo.com/441413314"
+                        className="margin-p"
+                      />
+                    </TabPane>
+                    <TabPane
+                      key="13"
                       tab={
                         <a
                           href="#"
@@ -2173,6 +2208,50 @@ class Page extends React.Component {
             key="4"
           >
             <Timeline>
+              <Timeline.Item color="#ffd700">
+                <p>
+                  <strong>
+                    A working prototype (month of September, 2020)
+                  </strong>
+                </p>
+                <div className="mask-p">
+                  <GalleryX
+                    data={this.props.data}
+                    lookup="g1"
+                    columns={{ min: 2, max: 2 }}
+                    Img={Img}
+                    Gallery={Gallery}
+                    MediaQuery={MediaQuery}
+                  />
+                </div>
+              </Timeline.Item>
+              <Timeline.Item color="#00128B">
+                <p>
+                  <strong>In Media (months of July and August, 2020)</strong>
+                </p>
+                <p>
+                  •&nbsp;
+                  <Link to="https://www.auroville.org/contents/5050">
+                    "Breathing easier: Aurovilians building ventilators"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="https://www.thehindu.com/news/national/tamil-nadu/auroville-team-designs-low-cost-ventilator-prototype/article31928633.ece">
+                    "Auroville team designs low-cost ventilator prototype"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="http://cms.newindianexpress.com/good-news/2020/jun/24/covid-19-auroville-engineers-in-collaboration-with-pims-develop-low-cost-ventilators-2160909.html">
+                    "COVID-19: Auroville engineers in collaboration with PIMS
+                    develop low cost ventilators"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="https://www.inkl.com/news/auroville-team-designs-low-cost-ventilator-prototype">
+                    "Auroville team designs low-cost ventilator prototype"
+                  </Link>
+                </p>
+              </Timeline.Item>
               <Timeline.Item color="#ffd700">
                 <p>
                   <strong>

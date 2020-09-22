@@ -7,7 +7,7 @@
     "title": "More",
     "menu": [
       { "title": "People", "link": "/people" },
-      { "title": "Notes", "link": "/notes" },
+      { "title": "Media", "link": "/media" },
       { "title": "Disclaimer", "link": "/disclaimer" }
     ]
   },

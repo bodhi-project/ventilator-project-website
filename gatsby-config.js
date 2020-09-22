@@ -38,9 +38,9 @@ module.exports = {
         production: false, // analyze production?
       },
     },
-    {
-      resolve: `gatsby-plugin-offline`, // https://www.gatsbyjs.org/packages/gatsby-plugin-offline
-    },
+    // {
+    //   resolve: `gatsby-plugin-offline`, // https://www.gatsbyjs.org/packages/gatsby-plugin-offline
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -1511,6 +1511,12 @@ export const query = graphql`
     mayLastWeek5: file(relativePath: { eq: "tusky/timeline/img5.jpg" }) {
       ...max900
     }
+    sept1: file(relativePath: { eq: "tusky/timeline/img6.jpg" }) {
+      ...max900
+    }
+    sept2: file(relativePath: { eq: "tusky/timeline/img7.jpg" }) {
+      ...max900
+    }
   }
 `
 
@@ -1629,12 +1635,8 @@ class Page extends React.Component {
               support of the Pondicherry Institute of Medical Sciences.
             </p>
             <p>
-              We're in Stage 2 at the moment &nbsp;(
-              <Link to="/notes">read note on self-reporting</Link>). These
-              devices have not yet recieved approvals or licenses. At the moment
-              we have a working prototype, and we are collaborating with medical
-              professionals to iterate until the prototype is medically worthy.
-              ahead.
+              The Tusky team is happy to report that it is collaborating with
+              industry experts and partners to bring this device to hospitals.
             </p>
           </TabPane>
           <TabPane
@@ -1666,25 +1668,6 @@ class Page extends React.Component {
           <TabPane
             tab={
               <a href="#" className="mask-p" onClick={e => e.preventDefault()}>
-                Tests
-              </a>
-            }
-            key="12"
-          >
-            <p>
-              There is a considerable amount of future work required to move
-              this prototype design up to a level considered medically-viable,
-              and even further work needed to reach medical-grade status. At the
-              moment of writing this document, the engineering teams from
-              Auroville are collaborating with Dr. Karnam Hasan of PIMS
-              (Pondicherry Institute of Medical Sciences) and a bio-medical
-              device engineers with whom the device is being / will be tested
-              comprehensively and iterated as necessary.
-            </p>
-          </TabPane>
-          <TabPane
-            tab={
-              <a href="#" className="mask-p" onClick={e => e.preventDefault()}>
                 Documentation
               </a>
             }
@@ -1712,6 +1695,84 @@ class Page extends React.Component {
                   url="https://vimeo.com/426941888"
                 />
               </TabPane>
+              <TabPane
+                key="13"
+                tab={
+                  <a
+                    href="#"
+                    className="mask-p"
+                    onClick={e => e.preventDefault()}
+                    style={{ marginBottom: 0 }}
+                  >
+                    Tusky Documentary
+                    <br />
+                    <small>A one-hour feature</small>
+                  </a>
+                }
+              >
+                <Video
+                  className="margin-p"
+                  ratio={0.57200057}
+                  url="https://vimeo.com/437033358"
+                />
+              </TabPane>
+              <TabPane
+                key="12"
+                tab={
+                  <a
+                    href="#"
+                    className="mask-p"
+                    onClick={e => e.preventDefault()}
+                    style={{ marginBottom: 0 }}
+                  >
+                    Testing
+                    <br />
+                    <small>Needs most work</small>
+                  </a>
+                }
+              >
+                <div>
+                  <p>
+                    We began our efforts by exploring many<supr>*</supr>{' '}
+                    open-source projects (we started with the Spanish{' '}
+                    <Link to="https://www.oxygen.protofy.xyz/">OXYGen</Link>{' '}
+                    design), and what we discovered was that there was a lack of
+                    clear and transparent information on what stage a project or
+                    a prototype was in. As we set out to document the efforts of
+                    our team <i>over time</i> we wanted to express clearly and
+                    transparently the status of our prototypes. We discovered
+                    the algorithm from{' '}
+                    <Link to="https://www.pubinv.org/">Public Invention</Link>
+                    &nbsp;(shown below) to be a good means to quickly inform
+                    others of our progress, and this is what we have adopted at
+                    the moment to report the status of the ventilator
+                    prototypes.
+                  </p>
+                  <div
+                    className="margin-p"
+                    style={{ paddingTop: '7px', paddingBottom: '7px' }}
+                  >
+                    <div style={{ maxWidth: '45rem' }} className="feature">
+                      <Img
+                        fluid={this.props.data.process.childImageSharp.fluid}
+                      />
+                    </div>
+                  </div>
+                  <p>
+                    <supr>*</supr> At the time of writing this note (last week
+                    of May, 2020) there are atleast a hundred and sixteen
+                    ventilator designs that teams around the world are working
+                    on. This information is tracked and managed by a community
+                    which is led by the{' '}
+                    <Link to="https://www.pubinv.org/">Public Invention</Link>{' '}
+                    group, and{' '}
+                    <Link to="https://docs.google.com/spreadsheets/d/1inYw5H4RiL0AC_J9vPWzJxXCdlkMLPBRdPgEVKF8DZw/edit#gid=0">
+                      can be found here
+                    </Link>
+                    .
+                  </p>
+                </div>
+              </TabPane>
             </Tabs>
           </TabPane>
           <TabPane
@@ -1723,6 +1784,50 @@ class Page extends React.Component {
             key="4"
           >
             <Timeline>
+              <Timeline.Item color="#ffd700">
+                <p>
+                  <strong>
+                    Tusky v1.5, a fully working prototype (September, 2020)
+                  </strong>
+                </p>
+                <div className="mask-p">
+                  <GalleryX
+                    data={this.props.data}
+                    lookup="sept"
+                    columns={{ min: 3, max: 3 }}
+                    Img={Img}
+                    Gallery={Gallery}
+                    MediaQuery={MediaQuery}
+                  />
+                </div>
+              </Timeline.Item>
+              <Timeline.Item color="#00128B">
+                <p>
+                  <strong>In Media (months of July and August, 2020)</strong>
+                </p>
+                <p>
+                  •&nbsp;
+                  <Link to="https://www.auroville.org/contents/5050">
+                    "Breathing easier: Aurovilians building ventilators"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="https://www.thehindu.com/news/national/tamil-nadu/auroville-team-designs-low-cost-ventilator-prototype/article31928633.ece">
+                    "Auroville team designs low-cost ventilator prototype"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="http://cms.newindianexpress.com/good-news/2020/jun/24/covid-19-auroville-engineers-in-collaboration-with-pims-develop-low-cost-ventilators-2160909.html">
+                    "COVID-19: Auroville engineers in collaboration with PIMS
+                    develop low cost ventilators"
+                  </Link>
+                  <br />
+                  •&nbsp;
+                  <Link to="https://www.inkl.com/news/auroville-team-designs-low-cost-ventilator-prototype">
+                    "Auroville team designs low-cost ventilator prototype"
+                  </Link>
+                </p>
+              </Timeline.Item>
               <Timeline.Item color="#ffd700">
                 <p>
                   <strong>Tusky v1, first look (last week of May, 2020)</strong>

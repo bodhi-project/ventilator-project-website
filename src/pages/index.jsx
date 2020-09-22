@@ -38,7 +38,13 @@ export const query = graphql`
     banner: file(relativePath: { eq: "banners/banner-without-text.jpg" }) {
       ...max3000
     }
-    tusky: file(relativePath: { eq: "tusky/feature1.jpg" }) {
+    tusky: file(relativePath: { eq: "banners/tusky.jpg" }) {
+      ...max1500
+    }
+    jasan: file(relativePath: { eq: "banners/jasan.jpg" }) {
+      ...max1500
+    }
+    airPurifier: file(relativePath: { eq: "banners/air-purifier.jpg" }) {
       ...max1500
     }
   }
@@ -100,11 +106,22 @@ class Page extends React.Component {
         </p>
         <p>
           Since we started, there have emerged three teams working on three
-          different ideas ⇾
+          different ideas.
         </p>
+        <p>
+          We're happy to report that it's been six months since this project
+          came about, and Tusky and JASAN have recently signed agreements with
+          an incubator and a commercial partner respectively to take the project
+          forward. ⇾
+        </p>
+        <br />
+        <br />
         <Division byThree className="margin-p">
           <div>
             <h3>Tusky Ventilator</h3>
+            <div className="mask-p">
+              <Img fluid={this.props.data.tusky.childImageSharp.fluid} />
+            </div>
             <p style={{ marginBottom: 0 }}>
               A low-cost, low-tech, portable, mechanised and non-invasive
               ventilator design that cannot get any simpler. For hospital and
@@ -115,6 +132,9 @@ class Page extends React.Component {
           </div>
           <div>
             <h3>JASAN Ventilator</h3>
+            <div className="mask-p">
+              <Img fluid={this.props.data.jasan.childImageSharp.fluid} />
+            </div>
             <p style={{ marginBottom: 0 }}>
               The JASAN ventilator is a cost-effective, compact, mechanised
               ventilator designed for both invasive and non-invasive ventilation
@@ -125,6 +145,9 @@ class Page extends React.Component {
           </div>
           <div>
             <h3>Box Purifier</h3>
+            <div className="mask-p">
+              <Img fluid={this.props.data.airPurifier.childImageSharp.fluid} />
+            </div>
             <p style={{ marginBottom: 0 }}>
               An affordable, low-tech, negative-ion air-purifier the size of a
               tissue box that can zap <i>everything</i>, and can be deployed in
@@ -134,6 +157,8 @@ class Page extends React.Component {
             </p>
           </div>
         </Division>
+        <br />
+        <br />
         <div className="feature" style={{ background: '#F6F7EC' }}>
           <br />
           <h3
@@ -145,7 +170,7 @@ class Page extends React.Component {
               marginBottom: 16,
             }}
           >
-            Please support us
+            Thanks for your support!
           </h3>
           <p
             style={{
@@ -155,16 +180,18 @@ class Page extends React.Component {
             }}
             className="support"
           >
-            A small community has emerged around these ideas spontaneously. We
-            are working passionately and round-the-clock on these machines. The
-            intention of everyone involved is to create something that can have
-            a positive impact and reach as many people in need as possible. We
-            need your help to continue working on this project.
+            Update in September (2020) – The Inspired Machines team is grateful
+            for your support. Through small contributions we were able to
+            bootstrap the project. We're happy to report that the two
+            ventilators have now found the relevant industry partners and are
+            working to bring the machines to hospitals.
             <br />
-            <Link to="/support">Support us ⇾</Link>
+            <Link to="/support">Read more ⇾</Link>
           </p>
           <br />
         </div>
+        <br />
+        <br />
       </StandardPage>
     )
   }

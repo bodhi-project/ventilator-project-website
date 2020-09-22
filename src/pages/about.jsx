@@ -5,8 +5,22 @@
 import React from 'react'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
+import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
+
 import Timeline from 'antd/lib/timeline'
 import '@bodhi-project/antrd/lib/just-futura/4.1.4/timeline/style/css'
+
+import Division from '@bodhi-project/components/lib/division'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/row/style/css'
+import '@bodhi-project/antrd/lib/just-futura/4.1.4/col/style/css'
+
+import Video from '@bodhi-project/components/lib/video'
+import '@bodhi-project/components/lib/video/style.less'
+
+import Gallery from 'react-photo-gallery'
+import MediaQuery from 'react-responsive'
+import GalleryX from '@bodhi-project/components/lib/gatsby/Gallery'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import StandardPage from '../components/wrappers/StandardPage'
@@ -19,10 +33,37 @@ import seoHelper from '../methods/seoHelper'
 const pageData = {
   pageTitle: 'About',
   nakedPageSlug: 'about',
-  pageAbstract: 'About',
+  pageAbstract:
+    '24 March 2020, Auroville, India. It was the first day of the national lockdown because of COVID-19. All of a sudden the threat became real for everybody. One of the main worries in India, amongst many others, was the lack of emergency ventilators, its affordability and reliance on imported models. Responses from individuals emerged spontaneously throughout the country to confront these challenges, and this project is such a response.',
 }
 
 const seoData = seoHelper(pageData)
+
+// ----------------------------------------------------------------------------
+// --------------------------------------------------------------------- Images
+// ----------------------------------------------------------------------------
+export const query = graphql`
+  query {
+    tuskySept1: file(relativePath: { eq: "tusky/timeline/img6.jpg" }) {
+      ...max900
+    }
+    tuskySept2: file(relativePath: { eq: "tusky/timeline/img7.jpg" }) {
+      ...max900
+    }
+    jasanSept1: file(relativePath: { eq: "jasan/img2.jpeg" }) {
+      ...max900
+    }
+    jasanSept2: file(relativePath: { eq: "jasan/img1.jpeg" }) {
+      ...max900
+    }
+    jasanSept3: file(relativePath: { eq: "jasan/img3.jpeg" }) {
+      ...max900
+    }
+    jasanSept4: file(relativePath: { eq: "jasan/img4.jpeg" }) {
+      ...max900
+    }
+  }
+`
 
 // ----------------------------------------------------------------------------
 // ------------------------------------------------------------------ Component
@@ -57,7 +98,7 @@ class Page extends React.Component {
           throughout the country to confront these challenges, and this project
           is such a response. Project timeline –
         </p>
-        <Timeline>
+        <Timeline reverse>
           <Timeline.Item color="#ffd700">
             <p style={{ marginBottom: 22 }}>
               <strong>
@@ -311,6 +352,101 @@ class Page extends React.Component {
               We will keep on posting updates in this space as the project
               unfolds.
             </p>
+          </Timeline.Item>
+          <Timeline.Item color="#ffd700">
+            <p style={{ marginBottom: 22 }}>
+              <strong>
+                Meet Tusky and JASAN
+                <br />
+                <small style={{ display: 'block', marginTop: -5 }}>
+                  month of July, 2020
+                </small>
+              </strong>
+            </p>
+            <Video
+              className="mask-p"
+              ratio={0.54999261}
+              url="https://vimeo.com/426941888"
+              style={{ background: 'unset' }}
+            />
+            <Video
+              className="mask-p"
+              ratio={0.54999261}
+              url="https://vimeo.com/426934352"
+              style={{ background: 'unset' }}
+            />
+          </Timeline.Item>
+          <Timeline.Item color="#ffd700">
+            <p style={{ marginBottom: 22 }}>
+              <strong>
+                In Media
+                <br />
+                <small style={{ display: 'block', marginTop: -5 }}>
+                  months of July and August, 2020
+                </small>
+              </strong>
+            </p>
+            <p>
+              •&nbsp;
+              <Link to="https://www.auroville.org/contents/5050">
+                "Breathing easier: Aurovilians building ventilators"
+              </Link>
+              <br />
+              •&nbsp;
+              <Link to="https://www.thehindu.com/news/national/tamil-nadu/auroville-team-designs-low-cost-ventilator-prototype/article31928633.ece">
+                "Auroville team designs low-cost ventilator prototype"
+              </Link>
+              <br />
+              •&nbsp;
+              <Link to="http://cms.newindianexpress.com/good-news/2020/jun/24/covid-19-auroville-engineers-in-collaboration-with-pims-develop-low-cost-ventilators-2160909.html">
+                "COVID-19: Auroville engineers in collaboration with PIMS
+                develop low cost ventilators"
+              </Link>
+              <br />
+              •&nbsp;
+              <Link to="https://www.inkl.com/news/auroville-team-designs-low-cost-ventilator-prototype">
+                "Auroville team designs low-cost ventilator prototype"
+              </Link>
+            </p>
+          </Timeline.Item>
+          <Timeline.Item color="#ffd700">
+            <p style={{ marginBottom: 22 }}>
+              <strong>
+                Bringing it together...
+                <br />
+                <small style={{ display: 'block', marginTop: -5 }}>
+                  month of September, 2020
+                </small>
+              </strong>
+            </p>
+            <p>
+              We're happy to report that it's been six months since this project
+              came about, and Tusky and JASAN have recently signed agreements
+              with an incubator and a commercial partner respectively to take
+              the project forward.
+            </p>
+            <p>This is how Tusky looks right now –</p>
+            <div className="mask-p">
+              <GalleryX
+                data={this.props.data}
+                lookup="tuskySept"
+                columns={{ min: 2, max: 2 }}
+                Img={Img}
+                Gallery={Gallery}
+                MediaQuery={MediaQuery}
+              />
+            </div>
+            <p>And, an update from JASAN in September –</p>
+            <div className="mask-p">
+              <GalleryX
+                data={this.props.data}
+                lookup="jasanSept"
+                columns={{ min: 2, max: 2 }}
+                Img={Img}
+                Gallery={Gallery}
+                MediaQuery={MediaQuery}
+              />
+            </div>
           </Timeline.Item>
         </Timeline>
       </StandardPage>

@@ -66,9 +66,7 @@ class Page extends React.Component {
           <strong>Box Purifier</strong> - Karthik, supported by Sumvit
         </p>
         <h3>Medical advising team</h3>
-        <p>
-          Dr. Hasan and Aneesh from Pondicherry Institute of Medical Sciences
-        </p>
+        <p>Dr. Hasan from Pondicherry Institute of Medical Sciences</p>
         <p>Dr. Shanu from Auroville Health Centre</p>
         <p>Surya from Auroville Dental Clinic</p>
         <h3>Documentation team</h3>

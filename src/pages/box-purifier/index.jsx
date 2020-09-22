@@ -923,9 +923,9 @@ class Page extends React.Component {
             </p>
             <p>
               This device is being developled by two engineers with support from
-              the Pondicherry Institute of Medical Sciences, and is in the
-              design phase for the moment. We hope to have the first prototype
-              by mid June.
+              the Pondicherry Institute of Medical Sciences, and is in the last
+              stages of development. We are also in talks with partners to take
+              the machine forward.
             </p>
           </TabPane>
           <TabPane
@@ -940,8 +940,7 @@ class Page extends React.Component {
               <Timeline.Item color="#ffd700">
                 <p>
                   <strong>
-                    5KV shall pass through that little 3D printed component
-                    (last week of May, 2020)
+                    Little 3D printed component (last week of May, 2020)
                   </strong>
                 </p>
                 <div className="mask-p">

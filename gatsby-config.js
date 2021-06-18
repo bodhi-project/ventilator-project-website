@@ -38,9 +38,29 @@ module.exports = {
         production: false, // analyze production?
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-offline`, // https://www.gatsbyjs.org/packages/gatsby-plugin-offline
-    // },
+    {
+      resolve: `gatsby-plugin-react-redux-persist`,
+      options: {
+        pathToCreateStoreModule: './src/state/createStore',
+        serialize: {
+          space: 0,
+          isJSON: true,
+          unsafe: false,
+          ignoreFunction: true,
+        },
+        cleanupOnClient: true,
+        windowKey: '__PRELOADED_STATE__',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-preact`, // https://www.npmjs.com/package/gatsby-plugin-remove-serviceworker
+    },
+    {
+      resolve: `gatsby-plugin-offline`, // https://www.gatsbyjs.org/packages/gatsby-plugin-offline
+    },
+    {
+      resolve: `gatsby-transformer-json`,
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -48,19 +68,28 @@ module.exports = {
         name: 'images',
       },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    // {
-    //   resolve: `gatsby-source-mongodb`, // https://www.gatsbyjs.org/packages/gatsby-source-mongodb/?=gatsby-source-mongodb
-    //   options: {
-    //     ...data.db,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/resources`,
+        name: 'resources',
+        ignore: [`**/*.src.json`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sharp`, // https://www.npmjs.com/package/gatsby-plugin-remove-serviceworker
+    },
+    {
+      resolve: `gatsby-transformer-sharp`, // https://www.npmjs.com/package/gatsby-plugin-remove-serviceworker
+    },
+    {
+      resolve: `gatsby-plugin-image`, // https://www.gatsbyjs.org/packages/gatsby-plugin-offline
+    },
     {
       resolve: `gatsby-plugin-react-helmet`, // https://www.gatsbyjs.org/packages/gatsby-plugin-react-helmet/?=gatsby-plugin-react-helmet
     },
     {
-      resolve: `gatsby-plugin-sitemap`, // https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap
+      resolve: `gatsby-plugin-advanced-sitemap`, // https://www.gatsbyjs.org/packages/gatsby-plugin-sitemap
     },
     {
       resolve: `gatsby-plugin-netlify`, // https://www.gatsbyjs.org/packages/gatsby-plugin-netlify/
@@ -139,37 +168,18 @@ module.exports = {
     //     },
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-favicon`, // https://www.npmjs.com/package/gatsby-plugin-favicon
-      options: {
-        logo: './src/images/logos/favicon.png',
-        // WebApp Manifest Configuration
-        appName: data.websiteName,
-        appDescription: data.websiteDescription,
-        developerName: data.org.name,
-        developerURL: data.org.url,
-        dir: 'auto',
-        lang: 'en-US',
-        background: '#fff',
-        theme_color: '#fff',
-        display: 'standalone',
-        orientation: 'any',
-        start_url: '/?homescreen=1',
-        version: '1.0',
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: true,
-          favicons: true,
-          firefox: true,
-          opengraph: true,
-          twitter: true,
-          yandex: true,
-          windows: true,
-        },
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: data.websiteName,
+    //     short_name: data.websiteName,
+    //     start_url: `/`,
+    //     background_color: `#f7f0eb`,
+    //     theme_color: `#a2466c`,
+    //     display: `standalone`,
+    //     icon: `./src/images/logos/favicon.png`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-canonical-urls`, // https://www.gatsbyjs.org/packages/gatsby-plugin-canonical-urls
       options: {
@@ -188,8 +198,21 @@ module.exports = {
     {
       resolve: `gatsby-plugin-less`, // https://www.gatsbyjs.org/packages/gatsby-plugin-less/
     },
-    // {
-    //   resolve: `gatsby-plugin-preact`, // https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-preact/
-    // },
+    {
+      resolve: `gatsby-plugin-intl`,
+      options: {
+        // language JSON resource path
+        path: `${__dirname}/src/intl`,
+        // supported language
+        languages: [`en`],
+        // language file path
+        defaultLanguage: `en`,
+        // option to redirect to `/en` when connecting `/`
+        redirect: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-remove-console`, // https://www.gatsbyjs.org/packages/gatsby-plugin-remove-console
+    },
   ],
 }

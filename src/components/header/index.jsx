@@ -3,24 +3,47 @@
 // ----------------------------------------------------------------------------
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Libraries
 import React from 'react'
-import PropTypes from 'prop-types'
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
+import { StaticQuery, graphql } from 'gatsby'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
-const { Fragment } = React
+// const { Fragment } = React
+const query = graphql`
+  query {
+    logo: file(relativePath: { eq: "logos/logo.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 900
+          placeholder: TRACED_SVG
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+  }
+`
 
 // ----------------------------------------------------------------------------
 // ------------------------------------------------------------------ Component
 // ----------------------------------------------------------------------------
-/** DocTemplate */
-const DocTemplate = props => {
-  return <Fragment>Hello!</Fragment>
-}
-
-DocTemplate.propTypes = {
-  pathContext: PropTypes.object,
-}
+/** Header */
+const Header = ({ children, ...props }) => (
+  <StaticQuery
+    query={query}
+    render={(data) => (
+      <header>
+        <div className="container">
+          <p>Header</p>
+        </div>
+      </header>
+    )}
+  />
+)
 
 // ----------------------------------------------------------------------------
 // --------------------------------------------------------------------- Export
 // ----------------------------------------------------------------------------
-export default DocTemplate
+export default Header

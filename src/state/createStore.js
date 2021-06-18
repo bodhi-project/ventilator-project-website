@@ -2,30 +2,36 @@
 // -------------------------------------------------------------------- Imports
 // ----------------------------------------------------------------------------
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Libraries
-import React from 'react'
-// import PropTypes from 'prop-types'
+import { createStore, applyMiddleware } from 'redux'
+import { persistReducer, persistStore } from 'redux-persist'
+import storage from 'redux-persist/lib/storage'
+import createDebounce from 'redux-debounced'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
-// import Button from 'antd/lib/button'
-import '@bodhi-project/antrd/lib/4.10.3/button/style/css'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
+import rootReducer from './rootReducer'
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
-// const { Fragment } = React
+const createStoreWithMiddleware = applyMiddleware(createDebounce())(createStore)
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['websiteState'],
+}
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // ----------------------------------------------------------------------------
-// ------------------------------------------------------------------ Component
+// --------------------------------------------------------------------- Method
 // ----------------------------------------------------------------------------
-/** Button */
-const Button = ({ children, ...props }) => {
-  return (
-    <button type="button" className="ant-btn">
-      {children}
-    </button>
-  )
+/** [description] */
+const storeWithPreloadedState = (preloadedState = {}) => {
+  const store = createStoreWithMiddleware(persistedReducer, undefined)
+  const persistor = persistStore(store)
+  return { store, persistor }
 }
 
 // ----------------------------------------------------------------------------
 // --------------------------------------------------------------------- Export
 // ----------------------------------------------------------------------------
-export default Button
+export default storeWithPreloadedState

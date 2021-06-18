@@ -29,7 +29,13 @@ const seoData = seoHelper(pageData)
 export const query = graphql`
   query {
     launch: file(relativePath: { eq: "launch.jpg" }) {
-      ...max900
+      childImageSharp {
+        gatsbyImageData(
+          width: 900
+          placeholder: TRACED_SVG
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
     }
   }
 `
@@ -38,11 +44,9 @@ export const query = graphql`
 // ------------------------------------------------------------------ Component
 // ----------------------------------------------------------------------------
 /** Page */
-const Page = props => (
+const Page = (props) => (
   <StandardPage className="" seoData={seoData} {...props}>
     <h1>Page not found!</h1>
-    <h2>Something 1</h2>
-    <h2>Something 2</h2>
     <p>
       <Link to="/">Homepage</Link>
     </p>

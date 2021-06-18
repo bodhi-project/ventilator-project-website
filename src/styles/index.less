@@ -1,326 +1,165 @@
 /* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------ Hide while loading
+/* ----------------------------------------------------------------- Imports
 /* ------------------------------------------------------------------------- */
-/*
-first things first, we need to hide everything,
-but bear in mind that this will only take effect
-once the loading script has taken effect.
-here we're hiding all content within
-the <html> once it has the class "wf-loading"
-*/
-// html.lk-loading body {
-//   opacity: 0;
-// }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Point
+@import '~@bodhi-project/components/lib/point/compile.less';
 
-/*
-just to make sure the <html>
-element shares the same dimensions as
-the browser window when loading
-(and not the potentially elongated page)
-*/
-// html.lk-loading {
-//   background-image: url('/loader.gif');
-//   background-repeat: no-repeat;
-//   background-position: center center;
-//   height: 100%;
-//   overflow: hidden;
-//   z-index: 2;
-// }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Type
+@import '~@bodhi-project/components/lib/type/reset.less';
+@import '~@bodhi-project/components/lib/type/define.less';
 
-/*
-add some transitional effects
-to reintroduce the content
-gradually once fonts are loaded
-*/
-// html.lk-active.wf-active body,
-// html.lk-active.wf-inactive body {
-//   -webkit-transition: opacity 0.5s ease-out;
-//   -moz-transition: opacity 0.5s ease-out;
-//   -o-transition: opacity 0.5s ease-out;
-//   transition: opacity 0.5s ease-out;
-// }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Colors
+@import '~@bodhi-project/components/lib/color/open-color/all.less';
+@import '~@bodhi-project/components/lib/color/reset.less';
+@import '~@bodhi-project/components/lib/color/form.less';
 
-#copy {
-  a.disabled {
-    color: rgba(0, 0, 0, 0.25);
-    pointer-events: none;
-    cursor: not-allowed;
-  }
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
+@import './variables.less';
+@import './type.less';
+@import './visibility-toggles.less';
 
-  p,
-  li {
-    max-width: 55rem;
-  }
+@import './features/boxed.less';
+@import './features/cover.less';
+@import './features/table.less';
+@import './features/tabs.less';
+@import './features/timeline.less';
+@import './features/two-col.less';
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: #00128b;
-  }
+/* ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------- Component
+/* ------------------------------------------------------------------------- */
+.defineType(@fontFamily, @lineHeight);
 
-  /* ----------------------------------------------------------------------- */
-  /* --------------------------------------------------------- AntD rewrites
-  /* ----------------------------------------------------------------------- */
-  .ant-tabs-bar {
-    border-bottom: 1px solid transparent !important;
-  }
-
-  .ant-tabs-tab-active {
-    & a {
-      color: #00128b !important;
-    }
-  }
-
-  .ant-tabs-ink-bar {
-    background-color: #00128b !important;
-  }
-
-  .ant-tooltip-inner {
-    background-color: #f8f8f8 !important;
-    color: unset !important;
-  }
-
-  .ant-tooltip-placement-top .ant-tooltip-arrow::before,
-  .ant-tooltip-placement-topLeft .ant-tooltip-arrow::before,
-  .ant-tooltip-placement-topRight .ant-tooltip-arrow::before {
-    background-color: #f8f8f8 !important;
-  }
-
-  .ant-tooltip {
-    & p {
-      margin-bottom: unset !important;
-
-      & strong {
-        font-weight: 700;
-      }
-    }
-  }
-
-  .slick-dots {
-    opacity: 1 !important;
-
-    & li {
-      height: 24px !important;
-      width: 24px !important;
-      opacity: 1 !important;
-
-      & button {
-        border-radius: 50% !important;
-        height: 24px !important;
-        width: 24px !important;
-        background-color: #00128b !important;
-        opacity: 1 !important;
-      }
-
-      &.slick-active {
-        & button {
-          background-color: #ffd700 !important;
-          opacity: 1 !important;
-        }
-      }
-    }
-  }
-
-  .ant-collapse-borderless {
-    background-color: transparent !important;
-  }
-
-  .ant-collapse-item {
-    border-bottom: 1px solid transparent !important;
-  }
-
-  .ant-collapse-content-box {
-    padding-top: 0px !important;
-    padding-left: 40px !important;
-
-    & > div {
-      border-bottom: 1px solid #00128b !important;
-    }
-  }
-
-  .ant-table-cell {
-    padding: 8px !important;
-  }
-
-  .ant-timeline-item-content {
-    top: -15px !important;
-  }
-
-  .fb-like {
-  }
-
-  /* ----------------------------------------------------------------------- */
-  /* -----------------------------------------------------------------------
-  /* ----------------------------------------------------------------------- */
-  [data-uri='/'],
-  [data-uri='/tusky'],
-  [data-uri='/notes'],
-  [data-uri='/jasan'] {
-    & .feature {
-      border: 2px solid #00128b;
-      border-radius: 8px;
-      position: relative;
-
-      @media (max-width: 991px) {
-        border-color: rgba(0, 18, 139, 0.4);
-      }
-
-      & .gatsby-image-wrapper {
-        position: relative;
-        z-index: -1;
-        transition: all 400ms ease-in;
-
-        @media (max-width: 991px) {
-          opacity: 0.3;
-        }
-      }
-
-      & .intro {
-        position: absolute;
-        top: 4px;
-        left: 30px;
-
-        @media (max-width: 991px) {
-          left: 10px;
-        }
-
-        & h1 {
-          color: #00128b;
-          line-height: 1 !important;
-          margin-bottom: 18px;
-
-          & span {
-            font-size: 125%;
-
-            @media (max-width: 991px) {
-              font-size: 105%;
-            }
-          }
-        }
-
-        & p {
-          color: #00128b;
-          line-height: 1.1 !important;
-        }
-      }
-    }
-
-    & p.support {
-      width: 55%;
-
-      @media (max-width: 991px) {
-        width: 90%;
-      }
-    }
-  }
-
-  [data-uri='/tusky'],
-  [data-uri='/jasan'] {
-    & .feature {
-      .tip {
-        position: absolute;
-        height: 24px;
-        width: 24px;
-        border-radius: 50%;
-        z-index: 100;
-        background-color: #00128b;
-        transition: all 400ms ease-in;
-
-        &:hover {
-          background-color: #ffd700;
-        }
-
-        &.tip1 {
-          top: 23%;
-          right: 9%;
-        }
-
-        &.tip2 {
-          top: 55%;
-          left: 29%;
-        }
-
-        &.tip3 {
-          top: 22%;
-          left: 37%;
-        }
-
-        &.tip4 {
-          top: 28%;
-          left: 22%;
-        }
-
-        &.tip5 {
-          top: 60%;
-          left: 55%;
-        }
-      }
-    }
-
-    & .ant-tabs-tabpane {
-      & > .ant-tabs {
-        & .ant-tabs-right-content {
-          border: unset !important;
-        }
-
-        & .ant-tabs-bar {
-          border: unset !important;
-        }
-
-        & .ant-tabs-bar {
-          @media (min-width: 991px) {
-            width: 25% !important;
-          }
-
-          & .ant-tabs-tab {
-            text-align: left !important;
-            padding-left: 36px !important;
-
-            & a {
-              line-height: 1.1 !important;
-              display: block;
-              text-align: left !important;
-
-              & span {
-                word-break: break-all;
-              }
-            }
-          }
-        }
-
-        & .ant-tabs-ink-bar {
-          height: 24px !important;
-          width: 24px !important;
-          border-radius: 50% !important;
-          left: 2px !important;
-          top: 18px !important;
-        }
-      }
-    }
-  }
-
-  .video {
-    border: unset !important;
+.spaced {
+  @media (max-width: 1279px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 /* ------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- Fixtures
 /* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------- */
+html#copy.copy {
+  & #layout.layout {
+    &.faqs {
+      & .wtf-collapse {
+        max-width: 42rem;
+      }
+
+      & .wtf-collapse-header {
+        display: flex;
+        align-items: center;
+        padding: 0.38rem 0.62rem 0.38rem 1.72rem;
+        border: 2px solid transparent;
+        transition: all 600ms ease;
+        // border-radius: 0.5rem;
+
+        & .anticon-right {
+          width: 0.75rem;
+          height: 100%;
+          padding: unset;
+          display: flex;
+          align-items: center;
+          padding-bottom: 0.3725rem;
+
+          & svg {
+            height: 0.75rem;
+            width: 0.75rem;
+          }
+        }
+
+        & h3 {
+          flex: 1;
+        }
+      }
+
+      & .wtf-collapse-content {
+        & .wtf-collapse-content-box {
+          padding: 0.38rem 1.72rem;
+
+          & p,
+          ul {
+            &:last-child {
+              margin-bottom: 0px !important;
+            }
+          }
+        }
+      }
+
+      & .wtf-collapse-item {
+        margin-bottom: 0.62rem;
+      }
+
+      & .wtf-collapse-item-active {
+        & .wtf-collapse-header {
+          background: var(--yellow-2);
+          border: 2px solid var(--gray-9);
+        }
+      }
+    }
+
+    & .responsive-padding {
+      padding: 1.1rem 2.2rem;
+    }
+
+    &.is-extra-large-desktop {
+    }
+
+    &.is-large-desktop {
+    }
+
+    &.is-desktop {
+    }
+
+    &.is-tablet {
+      & .responsive-padding {
+        padding: 0.55rem 1.1rem;
+      }
+
+      & .resonsive-flex {
+        display: block !important;
+
+        & > div {
+          width: 100% !important;
+          padding-bottom: 1rem;
+          padding-left: unset !important;
+        }
+      }
+    }
+
+    &.is-mobile {
+      & .responsive-padding {
+        padding: 0.55rem 1.1rem;
+      }
+
+      & .resonsive-flex {
+        display: block !important;
+
+        & > div {
+          width: 100% !important;
+          padding-bottom: 1rem;
+          padding-left: unset !important;
+        }
+      }
+    }
+
+    &.is-as-high-as-my-imac {
+    }
+
+    &.is-two-thirds-as-high-as-my-imac {
+    }
+
+    &.is-half-as-high-as-my-imac {
+    }
+
+    &.is-one-third-as-high-as-my-imac {
+    }
+
+    &.is-fourth-as-high-as-my-imac {
+    }
+
+    &.is-very-short-when-compared-to-my-imac {
+    }
+  }
+}

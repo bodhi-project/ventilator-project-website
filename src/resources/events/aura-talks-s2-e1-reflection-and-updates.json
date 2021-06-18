@@ -1,0 +1,17 @@
+{
+  "title": "Aura Talks S2E1: Reflection and Updates",
+  "routeSlug": "/events/aura-talks/s2/e1/reflection-and-updates",
+  "remoteCover": "https://img.youtube.com/vi/O0mctYHvCIE/hqdefault.jpg",
+  "tags": ["Aura Talks"],
+  "publishedTimestamp": 1589109240,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "Dear beloved listeners, after a well-deserved break we are happy to relaunch Aura Talks with a second season that will be filled with even more relevant conversations. Given the restrictions caused by the outbreak of COVID-19, we hope that this content will provide you some company during lonely lockdown hours. This season will be primarily hosted by Dan Be and Kshitij, the project manager and app-developer of the Aura project. In today's episode, the two hosts engage in a conversation with B, an original member of the Aura project, and discuss the relevance of the Aura movement during current times. In a time of unprecedented global economic turmoil, can the Aura Platform show the Auroville community and the rest of the world how we can rearrange our economy and find more conscious and social ways of sharing? Please tune in to find out what the Aura team is currently working on, and how you could be a part of the movement!"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=O0mctYHvCIE"
+    }
+  ]
+}

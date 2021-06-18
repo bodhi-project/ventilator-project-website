@@ -1,0 +1,12 @@
+{
+  "title": "Growth",
+  "routeSlug": "/reports/growth",
+  "cover": "../../images/dummies/img2.png",
+  "publishedTimestamp": 1614513601,
+  "contentBlocks": [
+    {
+      "type": "frame",
+      "content": "..."
+    }
+  ]
+}

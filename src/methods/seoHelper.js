@@ -9,7 +9,7 @@ import withUrl from '@bodhi-project/components/lib/methods/withUrl'
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import ogX from '../images/banners/ogX.jpg'
 import twitterSummaryX from '../images/banners/twitterSummaryX.jpg'
-import data from '../data/website.json'
+import data from '../seo/data.json'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
 const ogY = withUrl(ogX, data)

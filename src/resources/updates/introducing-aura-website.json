@@ -1,0 +1,16 @@
+{
+  "title": "Introducing Aura Website",
+  "routeSlug": "/updates/introducing-aura-website",
+  "cover": "../../images/dummies/img2.png",
+  "publishedTimestamp": 1614513600,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "Coming soon..."
+    },
+    {
+      "type": "image",
+      "resource": "../../images/dummies/img2.png"
+    }
+  ]
+}

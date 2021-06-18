@@ -1,16 +1,15 @@
 // ----------------------------------------------------------------------------
 // -------------------------------------------------------------------- Imports
 // ----------------------------------------------------------------------------
-// const path = require('path')
+const path = require(`path`)
+const { slash } = require(`gatsby-core-utils`)
 
-// ----------------------------------------------------------------------------
-// ------------------------------------------------------------------ Functions
-// ----------------------------------------------------------------------------
+// const path = require('path')
 exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   if (stage === 'build-javascript') {
     const config = getConfig()
     const miniCssExtractPlugin = config.plugins.find(
-      plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+      (plugin) => plugin.constructor.name === 'MiniCssExtractPlugin'
     )
     if (miniCssExtractPlugin) {
       miniCssExtractPlugin.options.ignoreOrder = true
@@ -19,190 +18,194 @@ exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
   }
 }
 
-// exports.onCreateWebpackConfig = ({ stage, actions }) => {
-//   actions.setWebpackConfig({
-//     node: false,
-//   })
-//   if (stage !== `develop`) {
-//     actions.setWebpackConfig({
-//       resolve: {
-//         alias: {
-//           react: `preact/compat`,
-//           'react-dom': `preact/compat`,
-//           'react-dom/server': `preact/compat`,
-//           'preact-compat': `preact-compat/dist/preact-compat`,
-//         },
-//       },
-//     })
-//   }
-// }
+// ----------------------------------------------------------------------------
+// ------------------------------------------------------------------- Methods
+// ----------------------------------------------------------------------------
+// exports.createPages = async ({ graphql, actions, reporter }) => {
+//   const { createPage } = actions
 
-// /**
-//  * Implement Gatsby's Node APIs in this file.
-//  *
-//  * See: https://www.gatsbyjs.org/docs/node-apis/
-//  */
-// const path = require('path')
-// const map = require('lodash/map')
-// const replace = require('lodash/replace')
-// // const forEach = require('lodash/forEach')
-// const { createRemoteFileNode } = require('gatsby-source-filesystem')
-// const data = require('./src/data/website.json')
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ About Pages
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   const aboutPageTemplate = path.resolve(
+//     `src/components/about-page-template/index.jsx`
+//   )
 
-// exports.onCreateNode = async ({
-//   node,
-//   actions,
-//   store,
-//   cache,
-//   createNodeId,
-// }) => {
-//   const { createNode, createNodeField } = actions
-//   if (node.internal.type === 'mongodbDb01Blog') {
-//     const { cover, gallery } = node
-
-//     let imageNode = await createRemoteFileNode({
-//       url: cover,
-//       cache,
-//       store,
-//       createNode,
-//       createNodeId,
-//       ext: '.jpg',
-//     })
-
-//     if (imageNode) {
-//       await createNodeField({
-//         node,
-//         name: `localFile___NODE`,
-//         value: imageNode.id,
-//       })
-//     }
-
-//     await createNodeField({
-//       node,
-//       name: 'galleryLength',
-//       value: gallery.length,
-//     })
-
-//     for (let i = 0; i < gallery.length; i += 1) {
-//       imageNode = await createRemoteFileNode({
-//         url: gallery[i],
-//         cache,
-//         store,
-//         createNode,
-//         createNodeId,
-//         ext: '.jpg',
-//       })
-
-//       if (imageNode) {
-//         await createNodeField({
-//           node,
-//           name: `gallery${i}___NODE`,
-//           value: imageNode.id,
-//         })
-//       }
-//     }
-
-//     // console.log(node)
-//   }
-// }
-
-// const fragment = `
-// childImageSharp {
-//   fluid(
-//     maxWidth: 2400
-//     quality: 80
-//     srcSetBreakpoints: [
-//       200
-//       400
-//       600
-//       800
-//       1000
-//       1200
-//       1600
-//       2000
-//       2400
-//     ]
-//   ) {
-//     base64
-//     tracedSVG
-//     aspectRatio
-//     src
-//     srcSet
-//     srcWebp
-//     srcSetWebp
-//     sizes
-//     originalImg
-//     originalName
-//     presentationWidth
-//     presentationHeight
-//   }
-// }
-// `
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage, createNode, createNodeId, createNodeField } = actions
-//   return new Promise((resolve, reject) => {
-//     const blogPostTemplate = path.resolve(`src/templates/post.jsx`)
-//     // Query for markdown nodes to use in creating pages.
-//     resolve(
-//       graphql(
-//         `
-//           query {
-//             allMongodbDb01Blog(filter: {projectContext: {eq: "${
-//               data.app.projectContext
-//             }"}}) {
-//               edges {
-//                 node {
-//                   id
-//                   pageTitle
-//                   pageContent
-//                   createdAt
-//                   fields {
-//                     localFile {
-//                       ${fragment}
-//                     }
-//                     gallery0 {
-//                       ${fragment}
-//                     }
-//                     gallery1 {
-//                       ${fragment}
-//                     }
-//                     gallery2 {
-//                       ${fragment}
-//                     }
-//                     gallery3 {
-//                       ${fragment}
-//                     }
-//                   }
-//                 }
-//               }
-//             }
-//             image1: file(relativePath: { eq: "srim.jpg" }) {
-//               ${fragment}
+//   const aboutPages = await graphql(
+//     `
+//       query AboutPages {
+//         allAboutJson {
+//           edges {
+//             node {
+//               routeSlug
 //             }
 //           }
-//         `
-//       ).then(result => {
-//         if (result.errors) {
-//           reject(result.errors)
 //         }
-//         const { edges } = result.data.allMongodbDb01Blog
-//         map(edges, async ({ node }) => {
-//           const { id } = node
-//           const url = replace(id, ' ', '-')
+//       }
+//     `
+//   )
 
-//           await createPage({
-//             path: `/updates/${url}`, // required
-//             component: blogPostTemplate,
-//             context: {
-//               ...node,
-//               image1: result.data.image1,
-//             },
-//           })
-//         })
+//   if (aboutPages.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`)
+//     return
+//   }
 
-//         return
-//       })
-//     )
+//   aboutPages.data.allAboutJson.edges.forEach((edge) => {
+//     console.log(`Creating ${edge.node.routeSlug}`)
+//     createPage({
+//       path: edge.node.routeSlug,
+//       component: aboutPageTemplate,
+//       context: {
+//         routeSlug: edge.node.routeSlug,
+//       },
+//     })
+//   })
+
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Case Studies
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   const caseStudyPageTemplate = path.resolve(
+//     `src/components/case-study-page-template/index.jsx`
+//   )
+
+//   const caseStudies = await graphql(
+//     `
+//       query CaseStudies {
+//         allCaseStudiesJson {
+//           edges {
+//             node {
+//               routeSlug
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+
+//   if (caseStudies.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`)
+//     return
+//   }
+
+//   caseStudies.data.allCaseStudiesJson.edges.forEach((edge) => {
+//     console.log(`Creating ${edge.node.routeSlug}`)
+//     createPage({
+//       path: edge.node.routeSlug,
+//       component: caseStudyPageTemplate,
+//       context: {
+//         routeSlug: edge.node.routeSlug,
+//       },
+//     })
+//   })
+
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Events
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   const eventPageTemplate = path.resolve(
+//     `src/components/event-page-template/index.jsx`
+//   )
+
+//   const events = await graphql(
+//     `
+//       query Events {
+//         allEventsJson {
+//           edges {
+//             node {
+//               routeSlug
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+
+//   if (events.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`)
+//     return
+//   }
+
+//   events.data.allEventsJson.edges.forEach((edge) => {
+//     console.log(`Creating ${edge.node.routeSlug}`)
+//     createPage({
+//       path: edge.node.routeSlug,
+//       component: eventPageTemplate,
+//       context: {
+//         routeSlug: edge.node.routeSlug,
+//       },
+//     })
+//   })
+
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Reports
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   const reportPageTemplate = path.resolve(
+//     `src/components/report-page-template/index.jsx`
+//   )
+
+//   const reports = await graphql(
+//     `
+//       query Reports {
+//         allReportsJson {
+//           edges {
+//             node {
+//               routeSlug
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+
+//   if (reports.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`)
+//     return
+//   }
+
+//   reports.data.allReportsJson.edges.forEach((edge) => {
+//     console.log(`Creating ${edge.node.routeSlug}`)
+//     createPage({
+//       path: edge.node.routeSlug,
+//       component: reportPageTemplate,
+//       context: {
+//         routeSlug: edge.node.routeSlug,
+//       },
+//     })
+//   })
+
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Newsletters
+//   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//   const updatePageTemplate = path.resolve(
+//     `src/components/update-page-template/index.jsx`
+//   )
+
+//   const updates = await graphql(
+//     `
+//       query Updates {
+//         allUpdatesJson {
+//           edges {
+//             node {
+//               routeSlug
+//             }
+//           }
+//         }
+//       }
+//     `
+//   )
+
+//   if (updates.errors) {
+//     reporter.panicOnBuild(`Error while running GraphQL query.`)
+//     return
+//   }
+
+//   updates.data.allUpdatesJson.edges.forEach((edge) => {
+//     console.log(`Creating ${edge.node.routeSlug}`)
+//     createPage({
+//       path: edge.node.routeSlug,
+//       component: updatePageTemplate,
+//       context: {
+//         routeSlug: edge.node.routeSlug,
+//       },
+//     })
 //   })
 // }

@@ -1,0 +1,36 @@
+{
+  "title": "Introducing the Aura T-Shirt",
+  "routeSlug": "/events/introducing-the-aura-t-shirt",
+  "publishedTimestamp": 1605570689,
+  "shortAbstract": "Would you like to become an Aura ambassador? Be a proud member of the Aura Network by wearing one of our T-shirts :) Fashionable for people of all ages ;)",
+  "cover": "../../images/events/introducing-the-aura-t-shirt/img4.jpg",
+  "tags": ["Community Event"],
+  "contentBlocks": [
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img1.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img2.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img3.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img4.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img5.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img6.jpg"
+        },
+        {
+          "cover": "../../images/events/introducing-the-aura-t-shirt/img7.jpg"
+        }
+      ]
+    }
+  ]
+}

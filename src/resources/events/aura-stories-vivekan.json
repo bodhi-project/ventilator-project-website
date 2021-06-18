@@ -1,0 +1,93 @@
+{
+  "title": "Vivekan",
+  "routeSlug": "/events/aura-stories/vivekan",
+  "tags": ["Aura Stories"],
+  "cover": "../../images/events/aura-stories-vivekan/img1.JPG",
+  "shortAbstract": "Upcoming.",
+  "publishedTimestamp": 1613545258,
+  "contentBlocks": [
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img1.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img2.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img3.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img4.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img5.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img6.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img7.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img8.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img9.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img10.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img11.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img12.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img13.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img14.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img15.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img16.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img17.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img18.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img19.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img20.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img21.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img22.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img23.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img24.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img25.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-vivekan/img26.JPG"
+        }
+      ]
+    }
+  ]
+}

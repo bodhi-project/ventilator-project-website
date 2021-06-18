@@ -1,0 +1,34 @@
+{
+  "title": "UYS, African Pavilion",
+  "routeSlug": "/events/uys-african-pavilion",
+  "tags": ["Community Event"],
+  "cover": "../../images/events/uys-african-pavilion/img1.jpg",
+  "shortAbstract": "The Unfold Your Skills workshop was developed by the Aura team to encourage participants to expand their definitions of an “offering”, tackle major barriers, and harvest the enthusiasm people have for such initiatives into active participation on the Aura Network.",
+  "publishedTimestamp": 1574233258,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "The Unfold Your Skills workshop was developed by the Aura team to encourage participants to (i) expand their definitions of an “offering”, (ii) tackle major barriers (i.e. time, sense of not belonging in the community) that kept them from sharing openly, and lastly, (iii) harvest the enthusiasm people have for such initiatives into active participation on the Aura Network."
+    },
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/uys-african-pavilion/img1.jpg"
+        },
+        {
+          "cover": "../../images/events/uys-african-pavilion/img2.jpg"
+        },
+        {
+          "cover": "../../images/events/uys-african-pavilion/img3.jpg"
+        },
+        {
+          "cover": "../../images/events/uys-african-pavilion/img4.jpg"
+        },
+        {
+          "cover": "../../images/events/uys-african-pavilion/img5.jpg"
+        }
+      ]
+    }
+  ]
+}

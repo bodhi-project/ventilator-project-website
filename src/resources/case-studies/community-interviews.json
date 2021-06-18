@@ -1,0 +1,48 @@
+{
+  "title": "Community Interviews",
+  "routeSlug": "/case-studies/community-interviews",
+  "cover": "../../images/dummies/img2.png",
+  "publishedTimestamp": 1614513600,
+  "contentBlocks": [
+    {
+      "type": "strong",
+      "content": "Who this?"
+    },
+    {
+      "type": "subtext",
+      "content": "The vegetarian carnivore"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=ukFnG1r609k"
+    },
+    {
+      "type": "strong",
+      "content": "Archana"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=3NsfI3uAThM"
+    },
+    {
+      "type": "strong",
+      "content": "B"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=lnszKNyPIpA"
+    },
+    {
+      "type": "strong",
+      "content": "Anandi"
+    },
+    {
+      "type": "subtext",
+      "content": "Savitri Bhavan nursery, Auroville"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=Dgr-vpxluk8"
+    }
+  ]
+}

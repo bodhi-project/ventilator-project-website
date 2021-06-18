@@ -1,0 +1,78 @@
+{
+  "title": "Anandi",
+  "routeSlug": "/events/aura-stories/anandi",
+  "tags": ["Aura Stories"],
+  "cover": "../../images/events/aura-stories-anandi/img3.JPG",
+  "video": "https://youtu.be/2CY24G6KJQo",
+  "shortAbstract": "The Aura team proudly presents the third episode of Aura Stories featuring Anandi, a radiant Aura ambassador!",
+  "publishedTimestamp": 1612854058,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "The Aura team proudly presents the third episode of Aura Stories featuring Anandi, a radiant Aura ambassador! Sincere thanks to Alessandra Silver for producing this series :)"
+    },
+    {
+      "type": "video",
+      "content": "https://youtu.be/2CY24G6KJQo"
+    },
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/aura-stories-anandi/img3.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img1.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img2.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img4.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img5.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img6.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img7.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img8.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img9.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img10.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img11.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img12.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img13.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img14.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img15.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img16.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img17.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-anandi/img18.JPG"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+/* ------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- Fixtures
+/* ------------------------------------------------------------------------- */
+html#copy.copy {
+  & #layout.layout {
+    & .cover {
+      border: 2px solid #00128b;
+      position: relative;
+
+      @media (max-width: 991px) {
+        border-color: rgba(0, 18, 139, 0.4);
+      }
+
+      & .gatsby-image-wrapper {
+        position: relative;
+        z-index: -1;
+        transition: all 400ms ease-in;
+
+        @media (max-width: 991px) {
+          opacity: 0.3;
+        }
+      }
+
+      & .intro {
+        position: absolute;
+        top: 1.24rem;
+        left: 0.62rem;
+
+        @media (max-width: 991px) {
+          left: 10px;
+        }
+
+        & h1 {
+          color: #00128b;
+          line-height: 1 !important;
+          margin-bottom: 18px;
+
+          & span {
+            font-size: 125%;
+
+            @media (max-width: 991px) {
+              font-size: 105%;
+            }
+          }
+        }
+
+        & p {
+          color: #00128b;
+          line-height: 1.1 !important;
+        }
+      }
+    }
+
+    &.is-extra-large-desktop {
+    }
+
+    &.is-large-desktop {
+    }
+
+    &.is-desktop {
+    }
+
+    &.is-tablet {
+    }
+
+    &.is-mobile {
+    }
+
+    &.is-as-high-as-my-imac {
+    }
+
+    &.is-two-thirds-as-high-as-my-imac {
+    }
+
+    &.is-half-as-high-as-my-imac {
+    }
+
+    &.is-one-third-as-high-as-my-imac {
+    }
+
+    &.is-fourth-as-high-as-my-imac {
+    }
+
+    &.is-very-short-when-compared-to-my-imac {
+    }
+  }
+}

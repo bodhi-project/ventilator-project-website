@@ -1,0 +1,24 @@
+{
+  "title": "The Interconnected Nature of a Community",
+  "routeSlug": "/reports/the-interconnected-nature-of-a-community",
+  "cover": "../../images/dummies/img2.png",
+  "publishedTimestamp": 1614513600,
+  "contentBlocks": [
+    {
+      "type": "frame",
+      "content": "..."
+    },
+    {
+      "type": "text",
+      "content": "This data visualisation shows relationships amongst the participants of the Aura Network. Each point, a participant in the project, is represented by a dot. The network is represented by a circle with each point equally distant from the center."
+    },
+    {
+      "type": "text",
+      "content": "Each wispy connection between two dots, the thin gray line, denotes that there has been some kind of exchange between two participants. The more intense the color the more exchange there has been."
+    },
+    {
+      "type": "text",
+      "content": "There is a layer of interactivity but into the visual – hover over a dot to a participant's \"inflow\" (outgoing edges, marked as red) and \"outflow\" (incoming edges, marked as golden) of Auras. When you hover it also colors up other points that a particular point is in connection to. This captures and elucidates on what Aura Platform is about – \"the value we create together\" – as it reveals visually the inter-connected nature of a community."
+    }
+  ]
+}

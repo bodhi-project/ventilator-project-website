@@ -1,0 +1,32 @@
+{
+  "title": "Archana",
+  "routeSlug": "/events/aura-stories/archana",
+  "tags": ["Aura Stories"],
+  "cover": "../../images/events/aura-stories-archana/img3.jpg",
+  "shortAbstract": "The Aura team proudly presents the second episode of Aura Stories featuring Archana, one of our first early adopters!",
+  "video": "https://youtu.be/Dk20EeF1CNg",
+  "publishedTimestamp": 1612249258,
+  "contentBlocks": [
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=3NsfI3uAThM"
+    },
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/aura-stories-archana/img1.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-stories-archana/img2.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-stories-archana/img3.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-stories-archana/img4.jpg"
+        }
+      ]
+    }
+  ]
+}

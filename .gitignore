@@ -65,5 +65,3 @@ public/
 
 # Bundle stats
 bundle-stats.json
-# Local Netlify folder
-.netlify

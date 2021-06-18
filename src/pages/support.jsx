@@ -7,8 +7,8 @@ import React from 'react'
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
-import Link from '../components/Link'
-import StandardPage from '../components/wrappers/StandardPage'
+import Link from '../components/link'
+import StandardPage from '../components/standard-page-wrapper'
 
 import seoHelper from '../methods/seoHelper'
 

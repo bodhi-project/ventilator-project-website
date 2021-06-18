@@ -1,0 +1,258 @@
+{
+  "title": "Aura Fest",
+  "routeSlug": "/events/aura-fest",
+  "publishedTimestamp": 1577606407,
+  "shortAbstract": "The Aura Fest, which took place on Dec 29, 2019, was the launch event for the Aura Platform. This festival showcased how the virtual platform would work offline. Essentially, it was a simulation of the platform that put on display the main features: a marketplace, through activities, a market, and an art space.",
+  "tags": ["Community Event"],
+  "cover": "../../images/events/aura-fest/img33.jpg",
+  "contentBlocks": [
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/aura-fest/img1.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img2.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img3.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img4.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img5.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img6.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img7.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img8.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img9.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img10.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img11.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img12.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img13.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img14.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img15.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img16.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img17.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img18.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img19.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img20.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img21.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img22.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img23.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img24.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img25.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img26.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img27.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img28.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img29.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img30.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img31.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img32.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img33.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img34.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img35.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img36.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img37.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img38.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img39.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img40.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img41.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img42.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img43.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img44.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img45.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img46.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img47.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img48.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img49.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img50.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img51.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img52.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img55.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img56.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img57.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img58.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img59.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img60.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img61.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img62.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img63.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img64.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img65.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img66.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img67.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img68.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img69.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img70.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img71.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img72.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img73.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img74.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img75.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img76.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img77.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img78.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img79.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img80.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img81.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img82.jpg"
+        },
+        {
+          "cover": "../../images/events/aura-fest/img83.jpg"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Aura Talks S2E3: Digitalization, The Future?",
+  "routeSlug": "/events/aura-talks/s2/e3/digitalization-the-future",
+  "remoteCover": "https://img.youtube.com/vi/F_cSzXvwRjE/hqdefault.jpg",
+  "tags": ["Aura Talks"],
+  "publishedTimestamp": 1590405240,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "On today’s episode of Aura Talks, Dan Be and Kshitij are joined by Andras, a software engineer currently working at Red Karma in the Netherlands. During this session of Aura Talks, the hosts explore the future of digitalisation, and more specifically, the movement away from physical currency (cash) towards digital currency that we are currently seeing as a trend. In addition to discussing some of the benefits of contactless payment systems, Andras identifies some of the reasons for the pushback for digitalisation (of currencies). Together, they also explore how the ideal of Auroville to create “Unity in Diversity” can be manifested in a digital domain through the open sharing of APIs (Application Programming Interface). If you would like to hear from a developer’s perspective how a sharing-based app that encourages mindful co-sharing and co-creating could be created, this is the episode for you! Happy Listening~! See you in the next one! Ciao for now~!"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=F_cSzXvwRjE"
+    }
+  ]
+}

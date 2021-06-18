@@ -1,0 +1,29 @@
+{
+  "title": "Presentation at Youth Link",
+  "routeSlug": "/events/presentation-at-youth-link",
+  "tags": ["Community Event"],
+  "cover": "../../images/events/presentation-at-youth-link/img2.jpg",
+  "publishedTimestamp": 1604041258,
+  "contentBlocks": [
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/presentation-at-youth-link/img1.jpg"
+        },
+        {
+          "cover": "../../images/events/presentation-at-youth-link/img2.jpg"
+        },
+        {
+          "cover": "../../images/events/presentation-at-youth-link/img3.jpg"
+        },
+        {
+          "cover": "../../images/events/presentation-at-youth-link/img4.jpg"
+        },
+        {
+          "cover": "../../images/events/presentation-at-youth-link/img5.jpg"
+        }
+      ]
+    }
+  ]
+}

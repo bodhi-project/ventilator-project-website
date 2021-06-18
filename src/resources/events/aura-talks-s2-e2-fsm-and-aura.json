@@ -1,0 +1,17 @@
+{
+  "title": "Aura Talks S2E2: FSM & Aura",
+  "routeSlug": "/events/aura-talks/s2/e2/fsm-and-aura",
+  "remoteCover": "https://img.youtube.com/vi/KCRjTAICx3s/hqdefault.jpg",
+  "tags": ["Aura Talks"],
+  "publishedTimestamp": 1589800440,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "On this week’s episode of Aura Talks, Dan Be is joined by Jonas, a former member of the Science Walden team. Together, they provide some necessary background on the Aura project: how the project began and how it has developed over time. If you would like to understand what the core values of Science Walden Center are and how their work on Feces Standard Money (FSM) relates to the Aura, this is the perfect episode for you! In addition to outlining the subtle differences between FSM and Aura, Jonas and Dan Be break down the components of a “Social Sharing Network” and discuss what determines the successful adoption of a new technological product or service. Happy Listening~! See you in the next one! Ciao for now~!"
+    },
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=KCRjTAICx3s"
+    }
+  ]
+}

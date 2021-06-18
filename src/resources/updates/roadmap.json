@@ -1,0 +1,12 @@
+{
+  "title": "Roadmap",
+  "routeSlug": "/updates/roadmap",
+  "cover": "../../images/dummies/img2.png",
+  "publishedTimestamp": 1614513600,
+  "contentBlocks": [
+    {
+      "type": "text",
+      "content": "Coming soon..."
+    }
+  ]
+}

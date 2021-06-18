@@ -1,0 +1,53 @@
+{
+  "title": "B",
+  "routeSlug": "/events/aura-stories/b",
+  "tags": ["Aura Stories"],
+  "cover": "../../images/events/aura-stories-b/img8.JPG",
+  "shortAbstract": "The Aura team proudly presents the very first episode of Aura Stories featuring our beloved core team member, B, and Veronique, an active member of the Network!",
+  "video": "https://youtu.be/JCMmAw8eW_U",
+  "publishedTimestamp": 1611730858,
+  "contentBlocks": [
+    {
+      "type": "video",
+      "content": "https://www.youtube.com/watch?v=lnszKNyPIpA"
+    },
+    {
+      "type": "gallery",
+      "resources": [
+        {
+          "cover": "../../images/events/aura-stories-b/img1.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img2.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img3.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img4.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img5.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img6.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img7.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img8.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img9.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img10.JPG"
+        },
+        {
+          "cover": "../../images/events/aura-stories-b/img11.JPG"
+        }
+      ]
+    }
+  ]
+}

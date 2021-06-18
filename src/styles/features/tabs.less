@@ -1,0 +1,81 @@
+/* ------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- Fixtures
+/* ------------------------------------------------------------------------- */
+html#copy.copy {
+  & #layout.layout {
+    & .wtf-tabs-nav {
+      border-top: 2px solid var(--color);
+      border-bottom: 2px solid var(--color);
+      padding-top: 0.31rem;
+      padding-bottom: 0.31rem;
+      margin-bottom: 0.62rem;
+
+      & .wtf-tabs-nav-wrap {
+        & .wtf-tabs-nav-list {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+
+          & .wtf-tabs-tab {
+            padding-top: 0.15rem;
+            padding-bottom: 0.31rem;
+
+            &:not(:first-child) {
+              padding-left: 0.62rem;
+
+              &:before {
+                content: '•';
+                display: block;
+                margin-right: 0.62rem;
+                opacity: 0.3;
+                color: var(--text-color);
+              }
+            }
+
+            & span {
+              display: block;
+              font-size: 110%;
+            }
+          }
+        }
+
+        & .wtf-tabs-ink-bar {
+          display: none;
+        }
+      }
+    }
+
+    &.is-extra-large-desktop {
+    }
+
+    &.is-large-desktop {
+    }
+
+    &.is-desktop {
+    }
+
+    &.is-tablet {
+    }
+
+    &.is-mobile {
+    }
+
+    &.is-as-high-as-my-imac {
+    }
+
+    &.is-two-thirds-as-high-as-my-imac {
+    }
+
+    &.is-half-as-high-as-my-imac {
+    }
+
+    &.is-one-third-as-high-as-my-imac {
+    }
+
+    &.is-fourth-as-high-as-my-imac {
+    }
+
+    &.is-very-short-when-compared-to-my-imac {
+    }
+  }
+}

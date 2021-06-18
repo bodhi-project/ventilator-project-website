@@ -6,7 +6,7 @@ import React from 'react'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
-import data from './data/website.json'
+import data from './seo/data.json'
 // import './assets/third-party/gtag--UA-109854711-2'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
@@ -20,7 +20,7 @@ const HTML = props => {
   const { headComponents, body, postBodyComponents } = props
 
   return (
-    <html lang="en" className="lk-loading normal" id="copy">
+    <html lang="en" className="copy lk-loading normal" id="copy">
       <head>
         <meta name="fragment" content="!" />
         <meta
@@ -33,10 +33,10 @@ const HTML = props => {
         <title>{`${data.websiteAbstract} | ${data.websiteName}`}</title>
         {headComponents}
       </head>
-      <body id="copy">
+      <body>
         <div id="___gatsby" dangerouslySetInnerHTML={{ __html: body }} />
         {postBodyComponents}
-        <link rel="stylesheet" href="/third-party/typekit.css" />
+        <link rel="stylesheet" href="/third-party/style.css" />
         <script async src="/third-party/ga.js" />
         <script
           dangerouslySetInnerHTML={{
@@ -46,7 +46,7 @@ const HTML = props => {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', 'UA-109854711-19');
+              gtag('config', 'UA-109854711-8');
             }
             `,
           }}

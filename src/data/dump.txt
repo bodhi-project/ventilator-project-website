@@ -1,0 +1,119 @@
+<div style={{ background: 'var(--gray-2)' }}>
+  <div className="container">
+    <div className="spaced">
+      <div
+        style={{
+          minHeight: '40rem',
+          display: 'flex',
+          paddingTop: '2.2rem',
+          paddingBottom: '2.2rem',
+        }}
+      >
+        <div
+          style={{
+            width: 'calc(38% - 2rem)',
+            marginRight: '2rem',
+          }}
+        >
+          <h2>Aura Stories</h2>
+          <p>
+            The Aura Network strives for a cashless community, a local
+            economy that empowers individuals for a life of freedom and
+            joy. As members of the community discover the abundance in
+            their lives, they naturally share with each other what they
+            value. An unconditional sharing and interdependence no
+            longer remains an unreachable ideal but a living reality.
+          </p>
+          <p>
+            Our weekly video series showcasing the members of the Aura
+            Network and their experiences on the platform.
+          </p>
+          <p style={{ marginBottom: '1.75rem' }}>
+            Produced in collaboration with Alessandra Silver.
+          </p>
+          <Button style={{ marginBottom: 0 }}>
+            See More<small>&nbsp;→</small>
+          </Button>
+        </div>
+        <div
+          style={{
+            width: '62%',
+            display: 'flex',
+            flexWrap: 'wrap',
+            marginTop: '-2rem',
+          }}
+        >
+          <div
+            style={{
+              width: 'calc(50% - 0.1rem)',
+              marginRight: '0.1rem',
+              // marginTop: '4rem',
+            }}
+          >
+            <div
+              style={{
+                minHeight: '18rem',
+                // border: '2px solid var(--gray-9)',
+                marginBottom: '0.1rem',
+              }}
+            >
+              <Img
+                fluid={props.data.auraStories1.childImageSharp.fluid}
+                durationFadeIn={getRandomArbitraryInt(150, 450)}
+                style={{ minHeight: 'inherit' }}
+                imgStyle={{
+                  objectFit: 'contain',
+                  objectPosition: 'bottom center',
+                }}
+              />
+            </div>
+            <div
+              style={{
+                minHeight: '18rem',
+                // border: '2px solid var(--gray-9)',
+                marginBottom: '0.1rem',
+              }}
+            >
+              <Img
+                fluid={props.data.auraStories3.childImageSharp.fluid}
+                durationFadeIn={getRandomArbitraryInt(150, 450)}
+              />
+            </div>
+          </div>
+          <div
+            style={{
+              width: 'calc(50% - 0.1rem)',
+              // marginLeft: '0.1rem',
+              marginTop: '2.2rem',
+            }}
+          >
+            <div
+              style={{
+                minHeight: '18rem',
+                // border: '2px solid var(--gray-9)',
+                marginBottom: '0.1rem',
+              }}
+            >
+              <Img
+                fluid={props.data.auraStories4.childImageSharp.fluid}
+                durationFadeIn={getRandomArbitraryInt(150, 450)}
+              />
+            </div>
+            <div
+              style={{
+                minHeight: '18rem',
+                // border: '2px solid var(--gray-9)',
+                marginBottom: '0.1rem',
+              }}
+            >
+              <Img
+                fluid={props.data.auraStories2.childImageSharp.fluid}
+                durationFadeIn={getRandomArbitraryInt(150, 450)}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

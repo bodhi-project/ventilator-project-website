@@ -15,7 +15,7 @@ import React from 'react'
 // ------------------------------------------------------------------ Component
 // ----------------------------------------------------------------------------
 /** [description] */
-const ArrowRight = props => {
+const ArrowRight = (props) => {
   return (
     <div {...props}>
       <svg width={229} height={884} viewBox="0 0 229 884">

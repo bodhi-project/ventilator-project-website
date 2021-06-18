@@ -5,22 +5,22 @@
 import React from 'react'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
-import { graphql } from 'gatsby'
+// import { graphql } from 'gatsby'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import Link from '../link'
 import '../link/style.less'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Abstractions
-const { Fragment } = React
+// const { Fragment } = React
 
-export const query = graphql`
-  query {
-    img1: file(relativePath: { eq: "aside/img1.png" }) {
-      ...max900
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     img1: file(relativePath: { eq: "aside/img1.png" }) {
+//       ...max900
+//     }
+//   }
+// `
 
 // ----------------------------------------------------------------------------
 // ------------------------------------------------------------------ Component

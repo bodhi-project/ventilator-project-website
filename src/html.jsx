@@ -5,6 +5,7 @@
 import React from 'react'
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Components
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Locals
 import data from './seo/data.json'
 // import './assets/third-party/gtag--UA-109854711-2'
@@ -16,21 +17,24 @@ import data from './seo/data.json'
 // ------------------------------------------------------------------ Component
 // ----------------------------------------------------------------------------
 /** HTML */
-const HTML = props => {
+const HTML = (props) => {
   const { headComponents, body, postBodyComponents } = props
 
   return (
     <html lang="en" className="copy lk-loading normal" id="copy">
       <head>
         <meta name="fragment" content="!" />
-        <meta
+        {/*<meta
           name="google-site-verification"
-          content={data.googleSiteVerification}
-        />
+          content="..."
+        />*/}
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{`${data.websiteAbstract} | ${data.websiteName}`}</title>
+        <title>
+          Devices for the commons created by collaborative efforts in Auroville,
+          India, since March 2020 | Inspired Machines
+        </title>
         {headComponents}
       </head>
       <body>

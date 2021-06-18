@@ -210,9 +210,24 @@ class Layout extends React.Component {
   }
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// ----------------------------------------------------------------------------
+// ---------------------------------------------------------------------- State
+// ----------------------------------------------------------------------------
+const withState = connect(
+  (state) => ({
+    mediaState: state.mediaState,
+    screenSizeState: state.screenSizeState,
+    websiteState: state.websiteState,
+  }),
+  (dispatch) => ({
+    updateMediaState(payload) {
+      dispatch(updateMediaState(payload))
+    },
+    updateScreenSizeState(payload) {
+      dispatch(updateScreenSizeState(payload))
+    },
+  })
+)
 
 // ----------------------------------------------------------------------------
 // ---------------------------------------------------------------------- State
